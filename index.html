@@ -3,178 +3,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Long & Co</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1a2b4c;
-      --accent: #2e4970;
-      --bg: #ffffff;
-      --text: #1f1f1f;
-      --muted: #777;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-    header {
-      padding: 100px 20px 60px;
-      background: linear-gradient(to right, #1a2b4c, #2e4970);
-      color: white;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5em;
-    }
-    header p {
-      font-size: 1.25rem;
-      color: #ccd6f6;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 15px 20px;
-      border-bottom: 1px solid #eee;
-      z-index: 999;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: var(--primary);
-    }
-    section {
-      max-width: 960px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-    h2 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea {
-      padding: 12px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
-    }
-    button {
-      background: var(--primary);
-      color: white;
-      padding: 12px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: var(--accent);
-    }
-    .contact-links {
-      margin-top: 30px;
-    }
-    .contact-links a {
-      color: var(--accent);
-      text-decoration: none;
-      margin-right: 15px;
-      font-weight: 500;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--muted);
-      padding: 40px 20px;
-      background: #f7f7f7;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
 </head>
 <body>
+  <header class="hero">
+    <div class="container">
+      <h1>Long & Co</h1>
+      <p>GTM Strategy for Growth Companies</p>
+    </div>
+  </header>
 
-<header>
-  <h1>Long & Co</h1>
-  <p>GTM Strategy for Growth Companies</p>
-</header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p>Long & Co partners with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, or fixing team performance, we bring calm, clarity, and commercial impact.</p>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About</h2>
-  <p>Long & Co partners with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, or fixing team performance, we bring calm, clarity, and commercial impact.</p>
-</section>
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <ul>
+        <li>Go-to-Market Strategy</li>
+        <li>Sales & Revenue Advisory</li>
+        <li>Pricing & Product Packaging</li>
+        <li>Interim GTM Leadership</li>
+        <li>International Expansion Strategy</li>
+        <li>Mentoring & Executive Coaching</li>
+      </ul>
+    </div>
+  </section>
 
-<section id="services">
-  <h2>Services</h2>
-  <ul>
-    <li>Go-to-Market Strategy</li>
-    <li>Sales & Revenue Advisory</li>
-    <li>Pricing & Product Packaging</li>
-    <li>Interim GTM Leadership</li>
-    <li>International Expansion Strategy</li>
-    <li>Mentoring & Executive Coaching</li>
-  </ul>
-</section>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="links">
+        <a href="mailto:robertbrlong@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/robertlong1" target="_blank">LinkedIn</a>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book a Call</a>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <form name="contact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="contact">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-  <div class="contact-links">
-    <p><a href="mailto:robertbrlong@gmail.com">Email me</a> | <a href="https://www.linkedin.com/in/robertlong1" target="_blank">LinkedIn</a> | <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book a Call</a></p>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 Long & Co. All rights reserved.</p>
-</footer>
-
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Long & Co. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
