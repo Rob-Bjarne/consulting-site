@@ -2,135 +2,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Long & Co</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
-            background-color: #fff;
-            scroll-behavior: smooth;
-        }
-        header {
-            background-color: #1a2b4c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #1a2b4c;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h2 {
-            color: #1a2b4c;
-        }
-        footer {
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
-        }
-        form button {
-            background-color: #1a2b4c;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        form button:hover {
-            background-color: #334c7a;
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                margin: 10px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Long & Co</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f1f1f;
+      --primary: #1a2b4c;
+      --muted: #888;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      padding: 80px 20px 40px;
+      text-align: center;
+      background: var(--bg);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 0;
+      background: #f7f7f7;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 10px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: var(--primary);
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2e4970;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 40px 20px;
+      background: #f7f7f7;
+      margin-top: 80px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Long & Co</h1>
-    <p>GTM Strategy for Growth Companies</p>
+  <h1>Long & Co</h1>
+  <p>GTM Strategy for Growth Companies</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-    <h2>About</h2>
-    <p>Long & Co partners with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, or fixing team performance, we bring calm, clarity, and commercial impact.</p>
+  <h2>About</h2>
+  <p>Long & Co partners with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, or fixing team performance, we bring calm, clarity, and commercial impact.</p>
 </section>
 
 <section id="services">
-    <h2>Services</h2>
-    <ul>
-        <li>Go-to-Market Strategy</li>
-        <li>Sales & Revenue Advisory</li>
-        <li>Pricing & Product Packaging</li>
-        <li>Interim GTM Leadership</li>
-        <li>International Expansion Strategy</li>
-        <li>Mentoring & Executive Coaching</li>
-    </ul>
+  <h2>Services</h2>
+  <ul>
+    <li>Go-to-Market Strategy</li>
+    <li>Sales & Revenue Advisory</li>
+    <li>Pricing & Product Packaging</li>
+    <li>Interim GTM Leadership</li>
+    <li>International Expansion Strategy</li>
+    <li>Mentoring & Executive Coaching</li>
+  </ul>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-    <p>Or email directly: <a href="mailto:robertbrlong@gmail.com">robertbrlong@gmail.com</a></p>
-    <p>Connect on <a href="https://www.linkedin.com/in/robertlong1" target="_blank">LinkedIn</a></p>
-    <p>Book a call: <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Open Calendar</a></p>
+  <h2>Contact</h2>
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p style="margin-top: 30px;">Or email: <a href="mailto:robertbrlong@gmail.com">robertbrlong@gmail.com</a></p>
+  <p><a href="https://www.linkedin.com/in/robertlong1" target="_blank">LinkedIn Profile</a> &nbsp;|&nbsp;
+     <a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Book a Call</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Long & Co. All rights reserved.</p>
+  <p>&copy; 2025 Long & Co. All rights reserved.</p>
 </footer>
 
 </body>
