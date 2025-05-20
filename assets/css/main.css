@@ -2983,37 +2983,3 @@ input, select, textarea {
 						}
 
 	}
-/* Skald Hero Header Layout */
-
-#logo.skald-header {
-  width: 100%;
-  max-width: none;
-  padding: 4rem 1rem;
-  background: url("../images/banner.jpg") center center / cover no-repeat;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#logo.skald-header img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-#logo.skald-header h2 {
-  margin-top: 1.5rem;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 0.15em;
-  font-weight: 400;
-}
-
-@media (max-width: 600px) {
-  #logo.skald-header h2 {
-    font-size: 1.2rem;
-  }
-}
