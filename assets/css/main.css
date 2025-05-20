@@ -2983,27 +2983,37 @@ input, select, textarea {
 						}
 
 	}
-/* Skald Logo Header Custom */
+/* Skald Hero Header Layout */
 
-#logo img.skald-logo {
-  max-width: 90%;
-  width: 600px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+#logo.skald-header {
+  width: 100%;
+  max-width: none;
+  padding: 4rem 1rem;
+  background: url("../images/banner.jpg") center center / cover no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#logo h2.skald-tagline {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.8); /* matches your current header text color */
+#logo.skald-header img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+#logo.skald-header h2 {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.15em;
+  font-weight: 400;
 }
 
 @media (max-width: 600px) {
-  #logo h2.skald-tagline {
-    font-size: 1.1rem;
+  #logo.skald-header h2 {
+    font-size: 1.2rem;
   }
 }
