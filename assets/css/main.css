@@ -2983,3 +2983,27 @@ input, select, textarea {
 						}
 
 	}
+/* Skald Logo Header Custom */
+
+#logo img.skald-logo {
+  max-width: 90%;
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#logo h2.skald-tagline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.8); /* matches your current header text color */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 600px) {
+  #logo h2.skald-tagline {
+    font-size: 1.1rem;
+  }
+}
