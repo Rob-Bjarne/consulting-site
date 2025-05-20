@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://skald.co/sitemap.xml
