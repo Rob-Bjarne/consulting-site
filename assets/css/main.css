@@ -2577,7 +2577,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				padding-bottom: 1px;
+				/*padding-bottom: 1px;*/
 			}
 
 			#titleBar {
@@ -2722,12 +2722,12 @@ input, select, textarea {
 					color: #fff;
 				}
 
-			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
+			/*body.navPanel-visible #page-wrapper {*/
+			/*	-moz-transform: translateX(275px);*/
+			/*	-webkit-transform: translateX(275px);*/
+			/*	-ms-transform: translateX(275px);*/
+			/*	transform: translateX(275px);*/
+			/*}*/
 
 			body.navPanel-visible #titleBar {
 				-moz-transform: translateX(275px);
