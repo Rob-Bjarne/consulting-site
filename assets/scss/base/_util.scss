@@ -1,0 +1,506 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:string";
+@use 'vars' as *;
+
+/////////////
+// MEDIA QUERIES
+
+@mixin screenWidthLessThan($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin screenWidthGreaterThan($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin screenHeightLessThan($height) {
+    @media only screen and (max-height: $height) {
+        @content;
+    }
+}
+
+@mixin screenHeightGreaterThan($height) {
+    @media only screen and (min-height: $height) {
+        @content;
+    }
+}
+
+/////////////
+// HOVER
+
+@mixin ifHasHover() {
+    @media (hover: hover) {
+        @content;
+    }
+}
+
+@mixin ifNotHasHover() {
+    @media (hover: none) {
+        @content;
+    }
+}
+
+@mixin hover() {
+    @include ifHasHover {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin hoverElseShow() {
+    @include ifHasHover {
+        &:hover {
+            @content;
+        }
+    }
+    @include ifNotHasHover {
+        @content;
+    }
+}
+
+/////////////
+// TEXT & UNIT CONVERSION
+
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin getFont($font, $defaultFallback: 'sans-serif') {
+    font-family: str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace(str-replace($font, '-xblack'), '-black'), '-xbold'), '-bold'), '-demi'), '-semibold'), '-medium'), '-regular'), '-light'), '-xlight'), '-thin'), '-italic'), $defaultFallback;
+    @if (string.index($font, '-italic')) {
+        font-style: italic;
+    } @else {
+        font-style: normal;
+    }
+    @if (string.index($font, '-thin')) {
+        font-weight: 100;
+    } @else if (string.index($font, '-xlight')) {
+        font-weight: 200;
+    } @else if (string.index($font, '-light')) {
+        font-weight: 300;
+    } @else if (string.index($font, '-regular')) {
+        font-weight: 400;
+    } @else if (string.index($font, '-medium')) {
+        font-weight: 500;
+    } @else if (string.index($font, '-demi')) {
+        font-weight: 600;
+    } @else if (string.index($font, '-semibold')) {
+        font-weight: 600;
+    } @else if (string.index($font, '-bold')) {
+        font-weight: 700;
+    } @else if (string.index($font, '-xbold')) {
+        font-weight: 800;
+    } @else if (string.index($font, '-black')) {
+        font-weight: 900;
+    } @else if (string.index($font, '-xblack')) {
+        font-weight: 950;
+    } @else {
+        font-weight: 400;
+    }
+}
+
+@function str-replace($string, $search, $replace: '') {
+    $index: string.index($string, $search);
+
+    @if $index {
+        @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@function px2vw($px, $width: $screen-4xl-px) {
+    @return (math.div($px, $width) * 100) + vw;
+}
+
+@function px2rem($px) {
+    @return math.div($px, $base-size) + rem;
+}
+
+@function px2em($px) {
+    @return math.div($px, 16) + em;
+}
+
+@mixin h1 { // setup
+    @include getFont($font-main-heading);
+    font-size: px2rem(50);
+    line-height: 1.1;
+    letter-spacing: px2rem(-0.68);
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-lg) {
+        font-size: px2rem(60);
+        letter-spacing: px2rem(-0.82);
+    }
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(70);
+        letter-spacing: px2rem(-1);
+    }
+
+    @include screenWidthGreaterThan($screen-2xl) {
+        font-size: px2rem(80);
+        letter-spacing: px2rem(-1.2);
+    }
+}
+
+@mixin h2 { // setup
+    @include getFont($font-heading);
+    font-size: px2rem(40);
+    line-height: 1.1;
+    letter-spacing: px2rem(-0.68);
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-lg) {
+        font-size: px2rem(46);
+        letter-spacing: px2rem(-0.72);
+    }
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(54);
+        letter-spacing: px2rem(-0.76);
+    }
+
+    @include screenWidthGreaterThan($screen-2xl) {
+        font-size: px2rem(60);
+        letter-spacing: px2rem(-0.8);
+    }
+}
+
+@mixin h3 { // setup
+    @include getFont($font-heading);
+    font-size: px2rem(30);
+    line-height: 1.1;
+    letter-spacing: px2rem(-0.48);
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-lg) {
+        font-size: px2rem(36);
+    }
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(40);
+    }
+}
+
+@mixin h4 { // setup
+    @include getFont($font-heading);
+    font-size: px2rem(20);
+    line-height: 1.5;
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-lg) {
+        font-size: px2rem(26);
+    }
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(30);
+    }
+}
+
+@mixin h5 { // setup
+    @include getFont($font-heading);
+    font-size: px2rem(18);
+    line-height: 1.5;
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(20);
+    }
+}
+
+@mixin h6 { // setup
+    @include getFont($font-heading);
+    font-size: px2rem(18);
+    line-height: 1.5;
+    color: $colour-heading-text;
+    text-wrap: balance;
+
+    @include screenWidthGreaterThan($screen-xl) {
+        font-size: px2rem(20);
+    }
+}
+
+@mixin bodyText { // setup
+    @include getFont($font-body-text);
+    color: $colour-body-text;
+    font-size: px2rem(16);
+    letter-spacing: px2rem(-0.32);
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+
+/////////////
+// BUTTONS
+
+@mixin button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    appearance: none;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    width: fit-content;
+    border: none;
+    outline: none;
+    isolation: isolate;
+    background: $colour-transparent-1;
+}
+
+@mixin disabledButton {
+    opacity: $faded;
+    cursor: not-allowed;
+}
+
+@mixin buttonPill($class-name, $border-colour, $background-colour, $text-colour) { // setup –
+    // explanation: base styling for pill-shaped button in its default state. hover styling is applied in the mixins that follow this one and should not be applied here.
+    @include button;
+    border-radius: $radius-pill;
+    height: px2rem(40);
+    padding-inline: 20px;
+    gap: px2rem(10);
+    overflow: hidden;
+    @include getFont($font-inter-semibold);
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        @include square(100%);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: $radius-pill;
+        transition: opacity $transition-sm-leave;
+    }
+
+    &::before {
+        background: $background-colour;
+        border-color: $border-colour;
+    }
+
+    &:disabled {
+        @include disabledButton;
+    }
+
+    .#{$class-name} {
+        &__text-holder {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__text {
+            grid-column: 1;
+            grid-row: 1;
+            font-size: px2rem(16);
+            transition: opacity $transition-sm-leave;
+
+            &--standard {
+                color: $text-colour;
+            }
+
+            &--hover {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@mixin buttonPillHover($class-name, $hover-border-colour, $hover-background-colour, $hover-text-colour) { // explanation: this mixin applies hover styles to buttons. it is to be used in button component files (e.g. button-pill-solid.vue). you will rarely need to edit this mixin, only doing so if you are changing overall button behaviour
+    @include buttonPillPreHover($class-name, $hover-border-colour, $hover-background-colour, $hover-text-colour);
+
+    @include hover {
+        @include buttonPillActiveHover($class-name);
+    }
+}
+
+@mixin buttonPillPreHover($class-name, $hover-border-colour, $hover-background-colour, $hover-text-colour) {
+    // explanation: sets hover styles that need to be present BEFORE `:hover` is triggered. you are unlikely to need to change the content of this mixin
+    // example usage: a news article card with a "read story" button. the card itself would be the link so the button would simply be a `<div>` styled like a button. hovering the card should trigger the button's hover state. this mixin, combined with `buttonPillActiveHover` below, allows that effect.
+    &::after {
+        background: $hover-background-colour;
+        border-color: $hover-border-colour;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity $transition-sm-leave;
+    }
+
+    .#{$class-name} {
+        &__text {
+            &--hover {
+                color: $hover-text-colour;
+            }
+        }
+    }
+}
+
+@mixin buttonPillActiveHover($class-name) {
+    // explanation: sets hover styles that take effect WHEN `:hover` is triggered. you are unlikely to need to change the content of this mixin
+    // example usage: see example info on `buttonPillPreHover`
+    &::before {
+        opacity: 0;
+        transition: opacity $transition-sm-enter;
+    }
+
+    &::after {
+        opacity: 1;
+        transition: opacity $transition-sm-enter;
+    }
+
+    .#{$class-name} {
+        &__text {
+            transition: opacity $transition-sm-enter;
+
+            &--standard {
+                opacity: 0;
+            }
+
+            &--hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/////////////
+// IMAGES
+
+@mixin coverBgImageHolder {
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+@mixin coverImage {
+    @include square(100%);
+    object-fit: cover;
+}
+
+@mixin containImage {
+    @include square(100%);
+    object-fit: contain;
+}
+
+/////////////
+// DIMENSIONS / LENGTHS
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+@function vwLengthDesktop($length) {
+    @return calc(($length / 1496) * 100vw); // useful for setting responsive widths / heights in vw units. `length` is a px value (do not use units) taken direct from desktop design
+}
+
+@function pxLengthAtScreen5xl($length) {
+    @return calc(($length / 1496) * 1600px); // useful for setting max widths / heights. `$length` is a px value (do not use units) taken direct from desktop design
+}
+
+@function remLengthAtScreen5xl($length) {
+    @return calc(($length / 1496) * $screen-5xl); // useful for setting max widths / heights. `$length` is a px value (do not use units) taken direct from desktop design
+}
+
+@function maintainDesktopRatioPx($length, $positive: true) {
+    // creates a responsive vw unit with a max px value useful for creating responsive grids / sizes that maintain the ratios set out in the desktop design
+
+    @if ($positive != true) { // required for negative values such as those used in transforms
+        @return max(vwLengthDesktop($length), pxLengthAtScreen5xl($length));
+    } @else {
+        @return min(vwLengthDesktop($length), pxLengthAtScreen5xl($length));
+    }
+}
+
+@function maintainDesktopRatioRem($length, $positive: true) {
+    // creates a responsive vw unit with a max rem value useful for creating responsive grids that maintain the ratios set out in the design
+
+    @if ($positive != true) { // required for negative values such as those used in transforms
+        @return max(vwLengthDesktop($length), remLengthAtScreen5xl($length));
+    } @else {
+        @return min(vwLengthDesktop($length), remLengthAtScreen5xl($length));
+    }
+}
+
+/////////////
+// MISC
+
+@mixin centreAbsolute {
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absoluteFill {
+    position: absolute;
+    inset: 0;
+    @include square(100%);
+}
+
+@mixin test($colour) {
+    outline: 2px solid $colour;
+    outline-offset: 0;
+}
+
+@mixin inputFocusStyle {
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid $colour-black;
+        border-radius: $radius-sm;
+    }
+}
+
+@mixin quoteInputFocusStyle {
+    &:focus {
+        outline: none;
+        border: 1px solid $colour-black;
+        border-radius: $radius-sm;
+    }
+}
+
+@mixin visuallyHidden {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+@mixin makeWhite {
+    filter: brightness(0) invert(1);
+}
+
+@mixin makeBlack {
+    filter: brightness(1) invert(1);
+}

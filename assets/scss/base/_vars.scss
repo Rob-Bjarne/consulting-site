@@ -1,0 +1,304 @@
+//
+// IMPORTANT NOTE: please search this file for "setup" and update variables as required. unless otherwise stated you should ONLY update the value of the variable and NOT the variable name. In most instances, variables that do not hav "setup" after them should not be changed.
+//
+
+// Base
+@use 'sass:math';
+
+$base-size: 16; // px
+
+//////////////////////////
+// Colours
+
+$colour-black: #000000;
+$colour-white: #FFFFFF;
+$colour-transparent-1: rgba(0, 0, 0, 0); // generally interchangeable with the $colour-transparent-2 but on some gradients one will work better than the other
+$colour-transparent-2: rgba(255, 255, 255, 0);
+
+$colour-coral: #E97770;
+$colour-light: #F3F3F3;
+$colour-dark: #282B34;
+$colour-grey: #484d55;
+$colour-light-grey: #919499;
+
+// setup – add further project-specific colours as required
+
+$colour-body-text: $colour-black; // setup
+$colour-body-text-inverted: $colour-white; // setup
+$colour-heading-text: $colour-black; // setup
+$colour-heading-text-inverted: $colour-white; // setup
+$colour-inline-link: inherit; // setup
+
+$colour-background: $colour-white; // setup
+$colour-background-inverted: $colour-black; // setup
+
+$faded: .75; // setup - explanation and example...
+// explanation: to be used as an opacity value in order to keep a consistent value across components
+// example: a disabled carousel navigation button (.navigation__button--next { opacity: $faded; }
+
+//////////////////////////
+// Fonts
+
+// setup – update the font variables below (names and values) with project specific fonts using the same format as this base app example
+// NOTE: `-thin`, `-xlight` etc part of the variable values is important to replicate in order for the `getFont` util to work
+// NOTE: `'Inter'` part of the variable values must match the string in the `font-family` value in `_fonts.scss` otherwise the wrong font will be displayed by the browser
+
+$font-inter-thin: 'Inter-thin';
+$font-inter-xlight: 'Inter-xlight';
+$font-inter-light: 'Inter-light';
+$font-inter-regular: 'Inter-regular';
+$font-inter-medium: 'Inter-medium';
+$font-inter-semibold: 'Inter-semibold';
+$font-inter-bold: 'Inter-bold';
+$font-inter-xbold: 'Inter-xbold';
+$font-inter-black: 'Inter-black';
+
+$font-body-text: $font-inter-regular; // setup
+$font-main-heading: $font-inter-xlight; // setup
+$font-heading: $font-inter-light; // setup
+
+//////////////////////////
+// Screen breakpoints
+
+$screen-xs-px: 320;
+$screen-sm-px: 360;
+$screen-md-px: 571;
+$screen-lg-px: 768;
+$screen-xl-px: 1024;
+$screen-2xl-px: 1200;
+$screen-3xl-px: 1366;
+$screen-4xl-px: 1440;
+$screen-5xl-px: 1600;
+
+$screen-xs: math.div($screen-xs-px, $base-size) + rem;
+$screen-sm: math.div($screen-sm-px, $base-size) + rem;
+$screen-md: math.div($screen-md-px, $base-size) + rem;
+$screen-lg: math.div($screen-lg-px, $base-size) + rem;
+$screen-xl: math.div($screen-xl-px, $base-size) + rem;
+$screen-2xl: math.div($screen-2xl-px, $base-size) + rem;
+$screen-3xl: math.div($screen-3xl-px, $base-size) + rem;
+$screen-4xl: math.div($screen-4xl-px, $base-size) + rem;
+$screen-5xl: math.div($screen-5xl-px, $base-size) + rem;
+
+//////////////////////////
+// TRANSITIONS
+
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); // a bespoke version of ease-in-out created by the design team and should be used in place of the default ease-in-out
+$overshoot-out: cubic-bezier(0.33, 1.4, 0.6, 1); // moves past the endpoint and then settles back
+$cross-fade-in: cubic-bezier(0.55, 0, 1, 0.45); // to be used on images that will fade in as part of a cross fade animation
+$cross-fade-out: cubic-bezier(0, 0.55, 0.45, 1); // to be used on images that will fade out (i.e. the currently `active` image) as part of a cross fade animation
+
+$transition-xs-ease: .1s ease;
+$transition-xs-leave: .1s ease-in;
+$transition-xs-enter: .1s ease-out;
+$transition-xs-linear: .1s linear;
+$transition-xs-in-out: .1s $ease-in-out;
+$transition-xs-overshoot-out: .1s $overshoot-out;
+$transition-xs-cross-fade-in: .1s $cross-fade-in;
+$transition-xs-cross-fade-out: .1s $cross-fade-out;
+$transition-delay-xs: .1s;
+
+$transition-sm-ease: .2s ease;
+$transition-sm-leave: .2s ease-in;
+$transition-sm-enter: .2s ease-out;
+$transition-sm-linear: .2s linear;
+$transition-sm-in-out: .2s $ease-in-out;
+$transition-sm-overshoot-out: .2s $overshoot-out;
+$transition-sm-cross-fade-in: .2s $cross-fade-in;
+$transition-sm-cross-fade-out: .2s $cross-fade-out;
+$transition-delay-sm: .2s;
+
+$transition-md-ease: .4s ease;
+$transition-md-leave: .4s ease-in;
+$transition-md-enter: .4s ease-out;
+$transition-md-linear: .4s linear;
+$transition-md-in-out: .4s $ease-in-out;
+$transition-md-overshoot-out: .4s $overshoot-out;
+$transition-md-cross-fade-in: .4s $cross-fade-in;
+$transition-md-cross-fade-out: .4s $cross-fade-out;
+$transition-delay-md: .4s;
+
+$transition-lg-ease: .6s ease;
+$transition-lg-leave: .6s ease-in;
+$transition-lg-enter: .6s ease-out;
+$transition-lg-linear: .6s linear;
+$transition-lg-in-out: .6s $ease-in-out;
+$transition-lg-overshoot-out: .6s $overshoot-out;
+$transition-lg-cross-fade-in: .6s $cross-fade-in;
+$transition-lg-cross-fade-out: .6s $cross-fade-out;
+$transition-delay-lg: .6s;
+
+$transition-xl-ease: .8s ease;
+$transition-xl-leave: .8s ease-in;
+$transition-xl-enter: .8s ease-out;
+$transition-xl-linear: .8s linear;
+$transition-xl-in-out: .8s $ease-in-out;
+$transition-xl-overshoot-out: .8s $overshoot-out;
+$transition-xl-cross-fade-in: .8s $cross-fade-in;
+$transition-xl-cross-fade-out: .8s $cross-fade-out;
+$transition-delay-xl: .8s;
+
+$transition-2xl-ease: 1s ease;
+$transition-2xl-leave: 1s ease-in;
+$transition-2xl-enter: 1s ease-out;
+$transition-2xl-linear: 1s linear;
+$transition-2xl-in-out: 1s $ease-in-out;
+$transition-2xl-overshoot-out: 1s $overshoot-out;
+$transition-2xl-cross-fade-in: 1s $cross-fade-in;
+$transition-2xl-cross-fade-out: 1s $cross-fade-out;
+$transition-delay-2xl: 1s;
+
+$transition-3xl-ease: 1.2s ease;
+$transition-3xl-leave: 1.2s ease-in;
+$transition-3xl-enter: 1.2s ease-out;
+$transition-3xl-linear: 1.2s linear;
+$transition-3xl-in-out: 1.2s $ease-in-out;
+$transition-3xl-overshoot-out: 1.2s $overshoot-out;
+$transition-3xl-cross-fade-in: 1.2s $cross-fade-in;
+$transition-3xl-cross-fade-out: 1.2s $cross-fade-out;
+$transition-delay-3xl: 1.2s;
+
+$transition-4xl-ease: 1.5s ease;
+$transition-4xl-leave: 1.5s ease-in;
+$transition-4xl-enter: 1.5s ease-out;
+$transition-4xl-linear: 1.5s linear;
+$transition-4xl-in-out: 1.5s $ease-in-out;
+$transition-4xl-overshoot-out: 1.5s $overshoot-out;
+$transition-4xl-cross-fade-in: 1.5s $cross-fade-in;
+$transition-4xl-cross-fade-out: 1.5s $cross-fade-out;
+$transition-delay-4xl: 1.5s;
+
+$transition-5xl-ease: 1.75s ease;
+$transition-5xl-leave: 1.75s ease-in;
+$transition-5xl-enter: 1.75s ease-out;
+$transition-5xl-linear: 1.75s linear;
+$transition-5xl-in-out: 1.75s $ease-in-out;
+$transition-5xl-overshoot-out: 1.75s $overshoot-out;
+$transition-5xl-cross-fade-in: 1.75s $cross-fade-in;
+$transition-5xl-cross-fade-out: 1.75s $cross-fade-out;
+$transition-delay-5xl: 1.75s;
+
+$transition-6xl-ease: 2s ease;
+$transition-6xl-leave: 2s ease-in;
+$transition-6xl-enter: 2s ease-out;
+$transition-6xl-linear: 2s linear;
+$transition-6xl-in-out: 2s $ease-in-out;
+$transition-6xl-overshoot-out: 2s $overshoot-out;
+$transition-6xl-cross-fade-in: 2s $cross-fade-in;
+$transition-6xl-cross-fade-out: 2s $cross-fade-out;
+$transition-delay-6xl: 2s;
+
+$transition-10xl-ease: 4s ease;
+$transition-10xl-leave: 4s ease-in;
+$transition-10xl-enter: 4s ease-out;
+$transition-10xl-linear: 4s linear;
+$transition-10xl-in-out: 4s $ease-in-out;
+$transition-10xl-overshoot-out: 4s $overshoot-out;
+$transition-10xl-cross-fade-in: 4s $cross-fade-in;
+$transition-10xl-cross-fade-out: 4s $cross-fade-out;
+$transition-delay-10xl: 4s;
+
+$hover-intent: .12s; // add this to transition-delay to prevent unwanted hover jump as the user's cursor crosses over elements with a hover effect. e.g. news article card, dropdown menu trigger.
+
+//////////////////////////
+// container based sizes
+
+// gutters
+$site-gutter: 0;
+$site-gutter-5xl: minmax(0, 1fr);
+$site-gutter-5xl-width: calc((100vw - #{$screen-5xl}) / 2); // explanation and example usage...
+// explanation: at `$screen-5xl` the inner content of a `.container` stops expanding. as a result, the site gutter starts expanding and so is not a fixed value. this variable calculates the width of the gutter at any given viewport width above screen-5xl. it is a rarely used variable but will create cleaner, more readable code if / when you need it.
+// example usage: aligning a fixed position element (e.g. a chat widget button or potentially a nav dropdown) to page content (`inset-inline-end: $site-gutter-5xl-width;`)
+
+// padding
+$container-padding-sm: 20px; // setup
+$container-padding-lg: 40px; // setup
+$container-padding-xl: 50px; // setup
+$container-padding-2xl: calc(100vw / 24); // setup
+$container-padding-3xl: calc(100vw / 24); // setup
+$container-padding-4xl: calc(100vw / 24); // setup
+$container-padding-5xl: calc(#{$screen-5xl} / 24); // setup
+
+// columns
+$column-count: 22; // setup
+$column-fraction: minmax(0, 1fr);
+$column-width-sm: calc((100vw - (#{$container-padding-sm} * 2)) / #{$column-count});
+$column-width-lg: calc((100vw - (#{$container-padding-lg} * 2)) / #{$column-count});
+$column-width-xl: calc((100vw - (#{$container-padding-xl} * 2)) / #{$column-count});
+$column-width-2xl: calc((100vw - (#{$container-padding-2xl} * 2)) / #{$column-count});
+$column-width-3xl: calc((100vw - (#{$container-padding-3xl} * 2)) / #{$column-count});
+$column-width-4xl: calc((100vw - (#{$container-padding-4xl} * 2)) / #{$column-count});
+$column-width-5xl: calc((#{$screen-5xl} - (#{$container-padding-5xl} * 2)) / #{$column-count});
+
+// inner (i.e. width of `.container` excluding padding and gutters).
+// example usage: setting the width of a fixed / absolute positioned element like a popup so it lines up nicely with the page content it covers (`width: $inner-width-2xl;`)
+$inner-width-sm: calc((100vw - (#{$container-padding-sm} * 2)));
+$inner-width-lg: calc((100vw - (#{$container-padding-lg} * 2)));
+$inner-width-xl: calc((100vw - (#{$container-padding-xl} * 2)));
+$inner-width-2xl: calc((100vw - (#{$container-padding-2xl} * 2)));
+$inner-width-3xl: calc((100vw - (#{$container-padding-3xl} * 2)));
+$inner-width-4xl: calc((100vw - (#{$container-padding-4xl} * 2)));
+$inner-width-5xl: calc((#{$screen-5xl} - (#{$container-padding-5xl} * 2)));
+
+// header (n.b. units required on all figures even if value is 0 to prevent fail when used in calculations) – add desired px value (no unit) in place of existing number
+$header-desktop-grid-row-1: math.div(50, $base-size) + rem; // setup
+$header-desktop-grid-row-2: math.div(50, $base-size) + rem; // setup
+$header-desktop-padding-block-start: math.div(0, $base-size) + rem; // setup
+$header-desktop-padding-block-end: math.div(10, $base-size) + rem; // setup
+
+$header-mobile-height: math.div(80, $base-size) + rem; // setup
+$header-desktop-height: calc(#{$header-desktop-grid-row-1} + #{$header-desktop-grid-row-2} + #{$header-desktop-padding-block-start} + #{$header-desktop-padding-block-end});
+$header-desktop-scrolled-height: calc(#{$header-desktop-height} - #{$header-desktop-grid-row-1} - #{$header-desktop-padding-block-start} + #{$header-desktop-padding-block-end});
+
+//////////////////////////
+// BORDER RADIUS
+
+$radius-pill: 100000px;
+$radius-circle: 50%;
+$radius-sm: 10px; // setup
+$radius-md: 20px; // setup
+$radius-lg: 30px; // setup
+
+// clipped versions of the above. to be used on `.asset` rather than `.asset__image` when parallax is being used
+$radius-pill-clipped: inset(0 0 0 0 round 100000px);
+$radius-circle-clipped: inset(0 0 0 0 round 50%);
+$radius-sm-clipped: inset(0 0 0 0 round 10px); // setup – match `round` value to `$radius-sm` above
+$radius-md-clipped: inset(0 0 0 0 round 20px); // setup – match `round` value to `$radius-md` above
+$radius-lg-clipped: inset(0 0 0 0 round 30px); // setup – match `round` value to `$radius-lg` above
+
+//////////////////////////
+// CLIP PATH
+
+$clip-to-left: inset(0 100% 0 0);
+$clip-to-right: inset(0 0 0 100%);
+$clip-to-top: inset(0 0 100% 0);
+$clip-to-bottom: inset(100% 0 0 0);
+
+$unclipped: inset(0 0 0 0);
+
+
+//////////////////////////
+// FLOW
+
+$flow-space-sm: 100px; // setup
+$flow-space-lg: 120px; // setup
+$flow-space-xl: 135px; // setup
+$flow-space-2xl: 150px; // setup
+$flow-space-3xl: 150px; // setup
+$flow-space-4xl: 150px; // setup
+$flow-space-5xl: 150px; // setup
+
+//////////////////////////
+// SHADOWS
+
+// setup – add any shadow variables here
+
+/////////////////////////
+// TRANSITIONS
+
+$translate-length-positive: 60px; // setup
+$translate-length-negative: -60px; // setup
+$translate-y-positive: translateY($translate-length-positive);
+$translate-y-negative: translateY($translate-length-negative);
+$translate-x-positive: translateX($translate-length-positive);
+$translate-x-negative: translateX($translate-length-negative);

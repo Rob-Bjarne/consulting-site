@@ -1,0 +1,150 @@
+@use './util';
+@use './vars' as *;
+
+body {
+    @include util.bodyText;
+}
+
+// GENERIC STYLES WITHIN CONTENT HTML
+
+h1,
+.h1 {
+    @include util.h1;
+}
+
+h2 {
+    @include util.h2;
+}
+
+h3 {
+    @include util.h3;
+}
+
+h4 {
+    @include util.h4;
+}
+
+h5 {
+    @include util.h5;
+}
+
+h6 {
+    @include util.h6;
+}
+
+p,
+.p,
+ul:not([class]),
+ol:not([class]),
+dl:not([class]),
+address {
+    max-width: 90ch;
+}
+
+dl:not([class]) {
+    padding-inline-start: 1.1em;
+    list-style: none;
+}
+
+ul:not([class]) {
+    list-style: none;
+    padding-inline-start: 1.4em; // setup
+
+    li {
+        padding-inline-start: calc(30px - 1.4em); // setup
+        position: relative;
+        list-style: none;
+
+        + li {
+            margin-block-start: util.px2rem(10); // setup
+
+            &::before { // setup
+                inset-block-start: 1ex
+            }
+        }
+
+        > ul,
+        > ol {
+            margin-block-start: util.px2rem(10); // setup
+        }
+
+        &::before { // setup
+            content: "";
+            position: absolute;
+            @include util.square(8px);
+            border-radius: $radius-circle;
+            background-color: $colour-body-text;
+            inset-inline-start: -14px;
+            inset-block-start: 1ex;
+        }
+    }
+}
+
+ol:not([class]) { // setup
+    list-style: decimal;
+    padding-inline-start: 1.8em;
+
+    li {
+        padding-inline-start: calc(30px - 1.4em);
+
+
+        & + li {
+            margin-block-start: util.px2rem(10);
+        }
+
+        &::marker {
+            color: currentcolor;
+        }
+
+        > ul,
+        > ol {
+            margin-block-start: util.px2rem(10);
+        }
+    }
+}
+
+a:not([class]) { // setup
+    font: inherit;
+    color: $colour-inline-link;
+    text-decoration: underline;
+    text-decoration-color: currentcolor;
+    transition: text-decoration-color $transition-sm-leave;
+
+    &:visited {
+        color: currentcolor;
+
+        @include util.hover {
+            text-decoration-color: $colour-transparent-1;
+            transition: text-decoration-color $transition-sm-enter;
+        }
+    }
+
+    @include util.hover {
+        text-decoration-color: $colour-transparent-1;
+        transition: text-decoration-color $transition-sm-enter;
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+strong { // setup
+    font-weight: 700;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+th {
+    font-weight: unset;
+}
+
+code {
+    padding-inline: 5px;
+    border: 1px solid rgb($colour-black, .6);
+    background-color: rgb($colour-black, .1);
+}
+
