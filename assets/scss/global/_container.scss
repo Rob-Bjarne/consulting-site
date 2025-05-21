@@ -1,0 +1,32 @@
+@use '/assets/scss/base/util';
+@use '/assets/scss/base/vars' as *;
+
+.container {
+    display: grid;
+    grid-template-columns: $site-gutter $container-padding-sm repeat($column-count, $column-fraction) $container-padding-sm $site-gutter;
+    position: relative;
+
+    & > * {
+        grid-column: 3 / -3;
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        grid-template-columns: $site-gutter $container-padding-lg repeat($column-count, $column-fraction) $container-padding-lg $site-gutter;
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        grid-template-columns: $site-gutter $container-padding-xl repeat($column-count, $column-fraction) $container-padding-xl $site-gutter;
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        grid-template-columns: $site-gutter $container-padding-2xl repeat($column-count, $column-fraction) $container-padding-2xl $site-gutter;
+    }
+
+    @include util.screenWidthGreaterThan($screen-3xl) {
+        grid-template-columns: $site-gutter $container-padding-3xl repeat($column-count, $column-fraction) $container-padding-3xl $site-gutter;
+    }
+
+    @include util.screenWidthGreaterThan($screen-5xl) {
+        grid-template-columns: $site-gutter-5xl $container-padding-5xl repeat($column-count, $column-width-5xl) $container-padding-5xl $site-gutter-5xl;
+    }
+}

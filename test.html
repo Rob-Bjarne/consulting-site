@@ -6,172 +6,274 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <script src="https://kit.fontawesome.com/928b7f4fdc.js" crossorigin="anonymous"></script>
 </head>
 <body class="homepage is-preload">
 <main id="page-wrapper">
 
     <!-- HEADER / HERO -->
-    <section id="header" class="wrapper">
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="#main">Services</a></li>
-                <li><a href="#highlights">Who we work with</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#footer">Contact</a></li>
+    <section class="header">
+
+        <!-- NAV -->
+
+        <nav class="header__nav main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__link">
+                    <a class="main-nav__link" href="#what">What we do</a>
+                </li>
+                <li class="main-nav__link">
+                    <a class="main-nav__link" href="#how">How we help</a>
+                </li>
+                <li class="main-nav__link">
+                    <a class="main-nav__link" href="#who">Who we work with</a>
+                </li>
+                <li class="main-nav__link">
+                    <a class="main-nav__link" href="#about">About</a>
+                </li>
+                <li class="main-nav__link">
+                    <a class="main-nav__link" href="#contact">Contact</a>
+                </li>
             </ul>
         </nav>
+
+        <!-- BACKGROUND IMAGE -->
+
+        <img class="header__background-image" src="images/banner.jpg" alt="Skald Advisory Logo" />
+
+        <h1 class="visually-hidden">GTM Strategy for growth companies</h1>
     </section>
 
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1">
-        <div class="title">Welcome</div>
-        <div class="container">
-            <p class="style2">
-                Helping B2B and SaaS companies<br class="mobile-hide"/>
-                grow faster — and smarter
-            </p>
-            <p class="style3">We partner with founders, revenue leaders, and investors to solve complex growth
-                challenges. Whether you're launching a new market, overhauling your GTM strategy, fixing team
-                performance, or at an inflection point, Skald Advisory brings calm, clarity, and commercial impact.</p>
-            <ul class="actions">
-                <li><a href="#" class="button style3 large">Get in touch</a></li>
-                <li><a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button style3 large">Schedule
-                    a call</a></li>
-            </ul>
+    <!-- WHAT WE DO -->
+
+    <section id="what" class="centred-callout-content">
+
+        <!-- HEADING -->
+
+        <div class="centred-callout-content__heading heading-tab">
+            <h2 class="heading-tab__heading">Welcome</h2>
+        </div>
+
+        <!-- CONTAINER -->
+
+        <div class="centred-callout-content__container container">
+
+            <!-- CALLOUT -->
+
+            <div class="centred-callout-content__callout callout callout--light">
+                <p class="callout__text">Helping B2B and SaaS companies grow faster — and smarter</p>
+            </div>
+
+            <!-- TEXT -->
+
+            <div class="centred-callout-content__text-block text-block">
+                <p>We partner with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, fixing team performance, or at an inflection point, Skald Advisory brings calm, clarity, and commercial impact.</p>
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="centred-callout-content__button-block button-block">
+                <a href="#contact" class="button-solid-dark">
+                    <span class="button-solid-dark__text">Get in touch</span>
+                </a>
+                <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-solid-dark">
+                    <span class="button-solid-dark__text">Schedule a call</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Main -->
-    <section id="main" class="wrapper style2">
-        <div class="title">How can we help?</div>
-        <div class="container">
-            <!-- Features -->
-            <section id="features">
-                <header class="style1">
-                    <p>Every engagement is different — here are a few ways we often work with clients.</p>
-                </header>
-                <div class="feature-list">
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon fa-comment">Go-to-Market Strategy</h3>
-                                <p>We design scalable, data-driven GTM models aligned to your ICP, channels, and growth
-                                    stage. From inbound/outbound sales to PLG and partnerships, we help you unlock
-                                    sustainable revenue.</p>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-sync">Sales & Revenue Advisory</h3>
-                                <p>We improve sales performance, structure teams, and implement operating cadences to
-                                    drive pipeline, predictability, and accountability.</p>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon fa-image">Pricing & Product Packaging</h3>
-                                <p>We refine pricing, messaging, and packaging to increase ACV, reduce sales friction,
-                                    and better align with customer value.</p>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-cog">Interim GTM Leadership</h3>
-                                <p>We provide short-term executive cover and special ops support for CRO or GTM roles,
-                                    helping you drive transformation, hiring, and clarity during inflection points.</p>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-wrench">International Expansion Strategy</h3>
-                                <p>We support entry into UK, US, or APAC markets — with tailored go-to-market, team
-                                    design, messaging, and localisation guidance.</p>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-check">Mentoring & Executive Coaching</h3>
-                                <p>We offer founder, executive, and emerging leader coaching. This is especially
-                                    valuable in fast-growing startups where leadership responsibilities often outpace
-                                    support. Think of it as exec-level mentorship with a pragmatic lens.</p>
-                            </section>
+    <!-- HOW WE HELP -->
+
+    <section id="how" class="feature-grid">
+
+        <div class="feature-grid__container container">
+
+            <!-- HEADING -->
+
+            <div class="feature-grid__heading heading-tab">
+                <h2 class="heading-tab__heading">How can we help?</h2>
+            </div>
+
+            <!-- CONTAINER -->
+
+            <div class="feature-grid__container container">
+
+                <!-- TAGLINE -->
+
+                <p class="feature-grid__tagline tagline">Every engagement is different — here are a few ways we often work with clients.</p>
+
+                <!-- GRID -->
+
+                <div class="feature-grid__grid">
+
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">Go-to-Market Strategy</h3>
+                            <p class="feature-card__text">We design scalable, data-driven GTM models aligned to your ICP, channels, and growth stage. From inbound/outbound sales to PLG and partnerships, we help you unlock sustainable revenue.</p>
                         </div>
                     </div>
-                </div>
-                <ul class="actions special">
-                    <li><a href="#footer" class="button style1 large">Get in touch</a></li>
-                    <li><a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank"
-                           class="button style2 large">Schedule a call</a></li>
-                </ul>
-            </section>
 
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">Sales & Revenue Advisory</h3>
+                            <p class="feature-card__text">We improve sales performance, structure teams, and implement operating cadences to drive pipeline, predictability, and accountability.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">Pricing & Product Packaging</h3>
+                            <p class="feature-card__text">We refine pricing, messaging, and packaging to increase ACV, reduce sales friction, and better align with customer value.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">Interim GTM Leadership</h3>
+                            <p class="feature-card__text">We provide short-term executive cover and special ops support for CRO or GTM roles, helping you drive transformation, hiring, and clarity during inflection points.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">International Expansion Strategy</h3>
+                            <p class="feature-card__text">We support entry into UK, US, or APAC markets — with tailored go-to-market, team design, messaging, and localisation guidance.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-grid__card feature-card">
+                        <i class="feature-card__icon fa-solid fa-user"></i>
+                        <div class="feature-card__body">
+                            <h3 class="feature-card__heading">Mentoring & Executive Coaching</h3>
+                            <p class="feature-card__text">We offer founder, executive, and emerging leader coaching. This is especially valuable in fast-growing startups where leadership responsibilities often outpace support. Think of it as exec-level mentorship with a pragmatic lens.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="feature-grid__button-block button-block">
+                    <a href="#contact" class="button-solid-coral">
+                        <span class="button-solid-coral__text">Get in touch</span>
+                    </a>
+                    <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
+                        <span class="button-outline-dark__text">Schedule a call</span>
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Highlights -->
-    <section id="highlights" class="wrapper style3">
-        <div class="title">Who we work with</div>
-        <div class="container">
-            <div class="row aln-center">
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""/></a>
-                        <h3><a href="#">Executive Teams</a></h3>
-                        <p>Founders, CEOs and executive teams at B2B/SaaS companies navigating their next stage of
-                            growth.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
+    <!-- WHO WE WORK WITH -->
+
+    <section id="who" class="grid-large-items">
+
+        <!-- HEADING -->
+
+        <div class="grid-large-items__heading heading-tab">
+            <h2 class="heading-tab__heading">Who we work with?</h2>
+        </div>
+
+        <!-- CONTAINER -->
+
+        <div class="grid-large-items__container container">
+
+            <!-- CARD GRID -->
+
+            <div class="grid-large-items__grid">
+
+                <div class="grid-large-items__card large-item-card">
+                    <img class="large-item-card__image" src="images/pic02.jpg" alt="placeholder"/>
+                    <h3 class="large-item-card__heading">Executive Teams</h3>
+                    <p class="large-item-card__text">Founders, CEOs and executive teams at B2B/SaaS companies navigating their next stage of growth.</p>
                 </div>
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""/></a>
-                        <h3><a href="#">Chief People Officers</a></h3>
-                        <p>From organiztional design to building high performance teams and cultures.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
+
+                <div class="grid-large-items__card large-item-card">
+                    <img class="large-item-card__image" src="images/pic03.jpg" alt="placeholder"/>
+                    <h3 class="large-item-card__heading">Chief People Officers</h3>
+                    <p class="large-item-card__text">From organizational design to building high performance teams and cultures.</p>
                 </div>
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic04.jpg" alt=""/></a>
-                        <h3><a href="#">Investors</a></h3>
-                        <p>Trusted advisory support for portfolio companies or expert input during due diligence.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
+
+                <div class="grid-large-items__card large-item-card">
+                    <img class="large-item-card__image" src="images/pic04.jpg" alt="placeholder"/>
+                    <h3 class="large-item-card__heading">Investors</h3>
+                    <p class="large-item-card__text">Trusted advisory support for portfolio companies or expert input during due diligence.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- About -->
-    <section id="about" class="wrapper style1">
-        <div class="title">About Me</div>
-        <div class="container">
-            <p class="style3">Rob Long is the founder of Skald Advisory. As Workable's first sales hire and eventual
-                CRO, he helped grow the company from 10 people to over 300, reaching $50M+ ARR across global markets.
-                Rob has also led Sales, Product Strategy, Product Marketing, Partnerships, and HR.
-                His strength lies in solving messy growth problems with structured thinking and hands-on action. He
-                brings breadth, calm, and credibility to every room — whether advising founders, mentoring functional
-                leaders, or steering GTM strategy.
-            </p>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="basic-text">
+
+        <!-- HEADING -->
+
+        <div class="basic-text__heading heading-tab">
+            <h2 class="heading-tab__heading">About me</h2>
+        </div>
+
+        <!-- CONTAINER -->
+
+        <div class="basic-text__container container">
+
+            <!-- TEXT BLOCK -->
+
+            <div class="basic-text__text-block text-block">
+                <p>Rob Long is the founder of Skald Advisory. As Workable's first sales hire and eventual CRO, he helped grow the company from 10 people to over 300, reaching $50M+ ARR across global markets. Rob has also led Sales, Product Strategy, Product Marketing, Partnerships, and HR. His strength lies in solving messy growth problems with structured thinking and hands-on action. He brings breadth, calm, and credibility to every room — whether advising founders, mentoring functional leaders, or steering GTM strategy.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <section id="footer" class="wrapper">
-        <div class="title">Get in touch</div>
-        <div class="container">
-            <header class="style1">
-                <h2>Need some help?</h2>
-                <p>
-                    If you’re building something ambitious and need an experienced<br/>
-                    partner to accelerate growth, we’d love to hear from you.
-                </p>
-            </header>
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact-module">
+
+        <!-- HEADING -->
+
+        <div class="contact-module__heading heading-tab">
+            <h2 class="heading-tab__heading">Get in touch</h2>
+        </div>
+
+        <!-- CONTAINER -->
+
+        <div class="contact-module__container container">
+
+            <div class="contact-module__mini-callout mini-callout">
+                <h3 class="mini-callout__heading">Need some help?</h3>
+                <p class="mini-callout__text">If you’re building something ambitious and need an experienced partner to accelerate growth, we’d love to hear from you.</p>
+            </div>
+
+            <div class="contact-module__contact-block">
+                <form class="contact-block__form form" name="contact" method="POST" data-netlify="true">
+                    <input class="visually-hidden" type="hidden" name="form-name" value="contact"/>
+                    <fieldset class="form__fieldset">
+                        <div class="form__field">
+                            <label class="form__label visually-hidden" for="contact-name">First Name</label>
+                            <input class="form__input" type="text" name="name" id="contact-name" placeholder="Name" required/>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label visually-hidden" for="contact-email">First Name</label>
+                            <input class="form__input" type="email" name="email" id="contact-email" placeholder="Email" required/>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label visually-hidden" for="contact-message">First Name</label>
+                            <textarea class="form__input form__input--textarea" name="message" id="contact-message" placeholder="Message" rows="4" required></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="form__submission-group">
+                        
+                    </div>
+                </form>
+            </div>
             <div class="row">
                 <div class="col-6 col-12-medium">
 
@@ -181,14 +283,11 @@
                             <input type="hidden" name="form-name" value="contact"/>
                             <div class="row gtr-50">
                                 <div class="col-6 col-12-small">
-                                    <input type="text" name="name" id="contact-name" placeholder="Name" required/>
+
                                 </div>
                                 <div class="col-6 col-12-small">
-                                    <input type="email" name="email" id="contact-email" placeholder="Email" required/>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" id="contact-message" placeholder="Message" rows="4"
-                                              required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <ul class="actions">
