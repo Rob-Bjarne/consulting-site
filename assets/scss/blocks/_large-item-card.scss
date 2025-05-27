@@ -1,0 +1,38 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.large-item-card {
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        font-size: util.px2rem(30);
+        margin-block-start: util.px2rem(30);
+    }
+
+    &__text {
+        margin-block-start: util.px2rem(20);
+        color: $colour-black;
+        max-width: util.px2rem(360);
+    }
+
+    &__asset {
+        aspect-ratio: 1;
+        width: 50%;
+        position: relative;
+    }
+
+    &__image-holder {
+        @include util.square(100%);
+    }
+
+    &__image {
+        position: absolute;
+        @include util.coverImage;
+        border-radius: $radius-sm;
+    }
+}

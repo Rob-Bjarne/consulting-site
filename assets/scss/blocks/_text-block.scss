@@ -1,0 +1,43 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.text-block {
+    > * + * {
+        margin-block-start: util.px2rem(20);
+    }
+
+    > * + h2,
+    > * + h3,
+    > * + h4,
+    > * + h5,
+    > * + h6 {
+        margin-block-start: util.px2rem(40);
+    }
+
+    h6 + * {
+        margin-block-start: util.px2rem(30);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        > * + * {
+            margin-block-start: util.px2rem(30);
+        }
+
+        > * + h2,
+        > * + h3,
+        > * + h4,
+        > * + h5,
+        > * + h6 {
+            margin-block-start: util.px2rem(50);
+        }
+
+        > h6 + * {
+            margin-block-start: util.px2rem(30);
+        }
+
+        > * + ul,
+        > ul + * {
+            margin-block-start: util.px2rem(40);
+        }
+    }
+}

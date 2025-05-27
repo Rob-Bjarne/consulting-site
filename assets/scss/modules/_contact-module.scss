@@ -1,0 +1,25 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.contact-module {
+    &__form {
+        margin-block-start: util.px2rem(60);
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &__content-area {
+            grid-column: 3/14;
+        }
+
+        &__form {
+            grid-column: 15/-3;
+            margin-block-start: 0;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        &__content-area {
+            grid-column: 3/13;
+        }
+    }
+}

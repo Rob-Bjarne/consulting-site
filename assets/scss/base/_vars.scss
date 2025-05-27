@@ -15,7 +15,10 @@ $colour-white: #FFFFFF;
 $colour-transparent-1: rgba(0, 0, 0, 0); // generally interchangeable with the $colour-transparent-2 but on some gradients one will work better than the other
 $colour-transparent-2: rgba(255, 255, 255, 0);
 
-$colour-coral: #E97770;
+$colour-coral: #F2545B;
+$colour-light-blue: #34E5FF;
+$colour-mid-blue: #3185FC;
+$colour-yellow: #FFE66D;
 $colour-light: #F3F3F3;
 $colour-dark: #282B34;
 $colour-grey: #484d55;
@@ -23,14 +26,14 @@ $colour-light-grey: #919499;
 
 // setup – add further project-specific colours as required
 
-$colour-body-text: $colour-black; // setup
-$colour-body-text-inverted: $colour-white; // setup
-$colour-heading-text: $colour-black; // setup
-$colour-heading-text-inverted: $colour-white; // setup
+$colour-body-text: $colour-dark; // setup
+$colour-body-text-inverted: $colour-light; // setup
+$colour-heading-text: $colour-dark; // setup
+$colour-heading-text-inverted: $colour-light; // setup
 $colour-inline-link: inherit; // setup
 
-$colour-background: $colour-white; // setup
-$colour-background-inverted: $colour-black; // setup
+$colour-background: $colour-light; // setup
+$colour-background-inverted: $colour-dark; // setup
 
 $faded: .75; // setup - explanation and example...
 // explanation: to be used as an opacity value in order to keep a consistent value across components
@@ -53,7 +56,7 @@ $font-inter-bold: 'Inter-bold';
 $font-inter-xbold: 'Inter-xbold';
 $font-inter-black: 'Inter-black';
 
-$font-body-text: $font-inter-regular; // setup
+$font-body-text: $font-inter-light; // setup
 $font-main-heading: $font-inter-xlight; // setup
 $font-heading: $font-inter-light; // setup
 

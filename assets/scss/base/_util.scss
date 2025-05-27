@@ -140,25 +140,21 @@
 
 @mixin h1 { // setup
     @include getFont($font-main-heading);
-    font-size: px2rem(50);
+    font-size: px2rem(30);
     line-height: 1.1;
-    letter-spacing: px2rem(-0.68);
     color: $colour-heading-text;
     text-wrap: balance;
 
     @include screenWidthGreaterThan($screen-lg) {
-        font-size: px2rem(60);
-        letter-spacing: px2rem(-0.82);
+        font-size: px2rem(40);
     }
 
     @include screenWidthGreaterThan($screen-xl) {
-        font-size: px2rem(70);
-        letter-spacing: px2rem(-1);
+        font-size: px2rem(50);
     }
 
     @include screenWidthGreaterThan($screen-2xl) {
-        font-size: px2rem(80);
-        letter-spacing: px2rem(-1.2);
+        font-size: px2rem(60);
     }
 }
 

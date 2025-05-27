@@ -1,0 +1,193 @@
+@use 'vars' as *;
+@use 'util';
+
+.module {
+    position: relative;
+
+    &:last-child {
+        margin-block-end: $flow-space-sm;
+    }
+
+    &--flush-to-footer {
+        &:last-child {
+            margin-block-end: 0;
+        }
+    }
+
+    &--colour-inverted {
+        background-color: $colour-background-inverted;
+        padding-block-start: $flow-space-sm;
+        color: $colour-body-text-inverted;
+
+        h2, h3, h4, h5, h6,
+        .h2, .h3, .h4, .h5, .h6 {
+            color: $colour-heading-text-inverted;
+        }
+
+        &:has(+ .module:not(.module--colour-inverted)) {
+            padding-block-end: $flow-space-sm;
+        }
+
+        &:has(+ .module--colour-inverted) { // on some screens there is sometimes a visible line (i.e. a gap between the modules showing the default background colour) between two inverted colour modules depending on scroll position / active scrolling. presumably something to do with resolution / px height calculations (or maybe something else :) ). this code adds an inverted colour line immediately after a inverted colour module that is followed by another inverted colour module. that has the effect of covering up the unwanted space
+            &::after {
+                content: "";
+                position: absolute;
+                inset-inline-start: 0;
+                inset-block-end: -1px;
+                width: 100%;
+                height: 2px;
+                background-color: $colour-background-inverted;
+            }
+        }
+
+        + .module--colour-inverted {
+            --flow-space: 0;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &:last-child {
+            margin-block-end: $flow-space-lg;
+        }
+
+        &--flush-to-footer {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--flush-to-footer-lg {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-lg;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-lg;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &:last-child {
+            margin-block-end: $flow-space-xl;
+        }
+
+        &--flush-to-footer,
+        &--flush-to-footer-lg,
+        &--flush-to-footer-xl {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-xl;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-xl;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        &:last-child {
+            margin-block-end: $flow-space-2xl;
+        }
+
+        &--flush-to-footer,
+        &--flush-to-footer-lg,
+        &--flush-to-footer-xl,
+        &--flush-to-footer-2xl {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-2xl;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-2xl;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-3xl) {
+        &:last-child {
+            margin-block-end: $flow-space-3xl;
+        }
+
+        &--flush-to-footer,
+        &--flush-to-footer-lg,
+        &--flush-to-footer-xl,
+        &--flush-to-footer-2xl,
+        &--flush-to-footer-3xl {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-3xl;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-3xl;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-4xl) {
+        &:last-child {
+            margin-block-end: $flow-space-4xl;
+        }
+
+        &--flush-to-footer,
+        &--flush-to-footer-lg,
+        &--flush-to-footer-xl,
+        &--flush-to-footer-2xl,
+        &--flush-to-footer-3xl,
+        &--flush-to-footer-4xl {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-4xl;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-4xl;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-5xl) {
+        &:last-child {
+            margin-block-end: $flow-space-5xl;
+        }
+
+        &--flush-to-footer,
+        &--flush-to-footer-lg,
+        &--flush-to-footer-xl,
+        &--flush-to-footer-2xl,
+        &--flush-to-footer-3xl,
+        &--flush-to-footer-4xl,
+        &--flush-to-footer-5xl {
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        &--colour-inverted {
+            padding-block-start: $flow-space-5xl;
+
+            &:has(+ .module:not(.module--colour-inverted)) {
+                padding-block-end: $flow-space-5xl;
+            }
+        }
+    }
+}

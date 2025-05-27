@@ -1,5 +1,5 @@
-@use '/assets/scss/base/util';
-@use '/assets/scss/base/vars' as *;
+@use '../base/util';
+@use '../base/vars' as *;
 
 .container {
     display: grid;

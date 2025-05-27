@@ -1,0 +1,61 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.home-hero {
+    &__container {
+        isolation: isolate;
+        grid-template-rows: 2fr auto 1fr;
+    }
+
+    &__image-holder {
+        grid-column: 1/-1;
+        grid-row: 1/span 3;
+        aspect-ratio: 10/13;
+    }
+
+    &__image {
+        object-position: bottom left;
+    }
+
+    &__text {
+        grid-row: 2;
+    }
+
+    &__heading,
+    &__tagline {
+        color: $colour-body-text-inverted;
+        text-shadow: 0 0 10px rgb($colour-body-text,.3);
+    }
+
+    &__tagline {
+        margin-block-start: util.px2rem(20);
+        @include util.getFont($font-inter-light);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &__tagline {
+            margin-block-start: util.px2rem(30);
+            font-size: util.px2rem(20);
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &__container {
+            height: 100vh;
+            grid-template-rows: 1fr auto 1fr;
+        }
+
+        &__image-holder {
+            aspect-ratio: unset;
+        }
+
+        &__text {
+            grid-column: 3/15;
+        }
+
+        &__tagline {
+            margin-block-start: util.px2rem(40);
+            font-size: util.px2rem(24);
+        }
+    }
+}

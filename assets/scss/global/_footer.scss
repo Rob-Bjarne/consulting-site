@@ -1,0 +1,8 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.footer {
+    background-color: $colour-background-inverted;
+    color: $colour-body-text-inverted;
+    padding-block: util.px2rem(100);
+}

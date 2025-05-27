@@ -1,0 +1,81 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.contact-link {
+    position: relative;
+    padding-inline-start: 40px;
+
+    &__icon {
+        @include util.square(20px);
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-start: 1px;
+    }
+
+    &__links-holder {
+        display: flex;
+        flex-direction: column;
+        gap: util.px2rem(5);
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &[href] {
+            @include util.hover {
+                .contact-link {
+                    &__text {
+                        text-decoration-color: $colour-dark;
+                        transition: text-decoration-color $transition-sm-enter;
+                    }
+                }
+            }
+        }
+    }
+
+    &__text {
+        text-decoration: underline;
+        text-decoration-color: $colour-transparent-1;
+        transition: text-decoration-color $transition-sm-leave;
+    }
+
+    &--light {
+        .contact-link {
+            &__text {
+                color: $colour-light;
+            }
+
+            &__link {
+                &[href] {
+                    @include util.hover {
+                        .contact-link {
+                            &__text {
+                                text-decoration-color: $colour-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--dark {
+        .contact-link {
+            &__text {
+                color: $colour-dark;
+            }
+
+            &__link {
+                &[href] {
+                    @include util.hover {
+                        .contact-link {
+                            &__text {
+                                text-decoration-color: $colour-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
