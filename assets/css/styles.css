@@ -605,19 +605,27 @@ code {
 .footer {
   background-color: #282B34;
   color: #F3F3F3;
-  padding-block: 6.25rem;
+  padding-block: 3.75rem;
 }
 .footer__logo {
-  height: 1.875rem;
-  width: auto;
+  height: auto;
+  width: 8.125rem;
 }
 .footer__small-print {
-  margin-block-start: 3.75rem;
+  margin-block-start: 2.5rem;
+  font-size: 0.75rem;
 }
-@media only screen and (min-width: 75rem) {
-  .footer__logo {
-    height: auto;
-    width: 8.125rem;
+@media only screen and (min-width: 48rem) {
+  .footer {
+    padding-block: 5rem;
+  }
+  .footer__small-print {
+    margin-block-start: 3.75rem;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .footer {
+    padding-block: 6.25rem;
   }
 }
 
@@ -1342,9 +1350,19 @@ code {
 .asset-content__asset {
   grid-column: 1/-1;
   aspect-ratio: 1;
+  grid-row: 1;
 }
 .asset-content__content-area {
   margin-block-start: 3.75rem;
+  grid-row: 2;
+}
+.asset-content--reversed .asset-content__content-area {
+  margin-block-start: 0;
+  grid-row: 1;
+}
+.asset-content--reversed .asset-content__asset {
+  margin-block-start: 3.75rem;
+  grid-row: 2;
 }
 @media only screen and (min-width: 48rem) {
   .asset-content__asset {
@@ -1364,6 +1382,8 @@ code {
   }
   .asset-content--reversed .asset-content__asset {
     grid-column: 17/-2;
+    margin-block-start: 0;
+    grid-row: 1;
   }
 }
 @media only screen and (min-width: 64rem) {
@@ -1389,9 +1409,6 @@ code {
   grid-column: 1/-1;
   aspect-ratio: 1;
 }
-.asset-content-accordion__image {
-  border-radius: 20px;
-}
 .asset-content-accordion__content-area {
   grid-row: 1;
 }
@@ -1406,6 +1423,9 @@ code {
   .asset-content-accordion__asset {
     grid-column: 3/12;
     margin-block-start: 4.375rem;
+  }
+  .asset-content-accordion__image {
+    border-radius: 20px;
   }
   .asset-content-accordion__accordion {
     grid-column: 14/-3;

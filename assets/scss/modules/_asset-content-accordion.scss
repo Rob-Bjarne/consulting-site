@@ -9,10 +9,6 @@
         aspect-ratio: 1;
     }
 
-    &__image {
-        border-radius: $radius-md;
-    }
-
     &__content-area {
         grid-row: 1;
     }
@@ -30,6 +26,10 @@
         &__asset {
             grid-column: 3/12;
             margin-block-start: util.px2rem(70);
+        }
+
+        &__image {
+            border-radius: $radius-md;
         }
 
         &__accordion {
