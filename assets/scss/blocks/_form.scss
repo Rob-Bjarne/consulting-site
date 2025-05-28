@@ -1,0 +1,85 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.form {
+    &__fieldset {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    &__field {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset-inline-start: 0;
+            inset-block-end: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $colour-dark;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform $transition-sm-leave;
+        }
+
+        &--full {
+            grid-column: 1 / -1;
+        }
+
+        &:has(.form__input:focus) {
+            &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform $transition-sm-enter;
+            }
+        }
+    }
+
+    &__input,
+    &__label {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    &__input {
+        height: util.px2rem(50);
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        border-block-end: 1px solid rgb($colour-dark, .2);
+        outline: none;
+
+        &--textarea {
+            padding-block-start: util.px2rem(10);
+        }
+    }
+
+    &__label {
+        position: relative;
+        line-height: 1;
+        height: util.px2rem(20);
+        z-index: 1;
+        display: inline-flex;
+        background-color: white;
+        margin-block-start: util.px2rem(15);
+        width: fit-content;
+        transition: transform $transition-sm-leave;
+        transform-origin: left;
+
+        &:has(+ .form__input:focus),
+        &:has(+ .form__input.form__input--has-content) {
+            transform: translateY(calc(#{util.px2rem(25)} * -1)) scale(0.8);
+            transition: transform $transition-sm-enter;
+            pointer-events: none;
+        }
+    }
+
+    &__submission-group {
+        margin-block-start: util.px2rem(40);
+    }
+}

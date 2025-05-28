@@ -4,6 +4,7 @@
 .contact-module {
     &__form {
         margin-block-start: util.px2rem(60);
+        max-width: calc(#{$column-width-5xl} * 10);
     }
 
     @include util.screenWidthGreaterThan($screen-xl) {

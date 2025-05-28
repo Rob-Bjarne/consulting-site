@@ -9,7 +9,7 @@
         @include util.square(20px);
         position: absolute;
         inset-inline-start: 0;
-        inset-block-start: 1px;
+        inset-block-start: 3px;
     }
 
     &__links-holder {
@@ -25,7 +25,7 @@
             @include util.hover {
                 .contact-link {
                     &__text {
-                        text-decoration-color: $colour-dark;
+                        text-decoration-color: $colour-transparent-1;
                         transition: text-decoration-color $transition-sm-enter;
                     }
                 }
@@ -35,8 +35,10 @@
 
     &__text {
         text-decoration: underline;
-        text-decoration-color: $colour-transparent-1;
+        text-decoration-color: $colour-dark;
         transition: text-decoration-color $transition-sm-leave;
+        color: $colour-body-text;
+        @include util.getFont($font-inter-medium);
     }
 
     &--light {

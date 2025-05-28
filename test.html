@@ -95,10 +95,10 @@
                     <!-- BUTTONS -->
 
                     <div class="content-area__button-block button-block">
-                        <a href="#contact" class="button-solid-coral">
-                            <div class="button-solid-coral__text-holder">
-                                <span class="button-solid-coral__text button-solid-coral__text--standard">Get in touch</span>
-                                <span aria-hidden="true" class="button-solid-coral__text button-solid-coral__text--hover">Get in touch</span>
+                        <a href="#contact" class="button-solid-mid-blue">
+                            <div class="button-solid-mid-blue__text-holder">
+                                <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                                <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
                             </div>
                         </a>
                         <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
@@ -152,10 +152,10 @@
                     <!-- BUTTONS -->
 
                     <div class="content-area__button-block button-block">
-                        <a href="#contact" class="button-solid-coral">
-                            <div class="button-solid-coral__text-holder">
-                                <span class="button-solid-coral__text button-solid-coral__text--standard">Get in touch</span>
-                                <span aria-hidden="true" class="button-solid-coral__text button-solid-coral__text--hover">Get in touch</span>
+                        <a href="#contact" class="button-solid-mid-blue">
+                            <div class="button-solid-mid-blue__text-holder">
+                                <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                                <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
                             </div>
                         </a>
                     </div>
@@ -348,10 +348,10 @@
                 <!-- BUTTONS -->
 
                 <div class="grid-large-items__button-block button-block">
-                    <a href="#contact" class="button-solid-coral">
-                        <div class="button-solid-coral__text-holder">
-                            <span class="button-solid-coral__text button-solid-coral__text--standard">Get in touch</span>
-                            <span aria-hidden="true" class="button-solid-coral__text button-solid-coral__text--hover">Get in touch</span>
+                    <a href="#contact" class="button-solid-mid-blue">
+                        <div class="button-solid-mid-blue__text-holder">
+                            <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                            <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
                         </div>
                     </a>
                     <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
@@ -493,25 +493,37 @@
 
                 <!-- FORM -->
 
-                <form class="contact-module__form form" name="contact" method="POST" data-netlify="true">
+                <form class="contact-module__form form" id="form" name="contact" method="POST" data-netlify="true">
                     <input class="visually-hidden" type="hidden" name="form-name" value="contact"/>
                     <fieldset class="form__fieldset">
                         <div class="form__field">
-                            <label class="form__label visually-hidden" for="contact-name">First Name</label>
-                            <input class="form__input" type="text" name="name" id="contact-name" placeholder="Name" required/>
+                            <label class="form__label" for="contact-name">Name</label>
+                            <input class="form__input" type="text" name="name" id="contact-name" required/>
                         </div>
                         <div class="form__field">
-                            <label class="form__label visually-hidden" for="contact-email">First Name</label>
-                            <input class="form__input" type="email" name="email" id="contact-email" placeholder="Email" required/>
+                            <label class="form__label" for="contact-email">Email</label>
+                            <input class="form__input" type="email" name="email" id="contact-email" required/>
                         </div>
                         <div class="form__field">
-                            <label class="form__label visually-hidden" for="contact-message">First Name</label>
-                            <textarea class="form__input form__input--textarea" name="message" id="contact-message" placeholder="Message" rows="4" required></textarea>
+                            <label class="form__label" for="contact-message">Message</label>
+                            <textarea class="form__input form__input--textarea" name="message" id="contact-message" rows="4" required></textarea>
                         </div>
                     </fieldset>
                     <div class="form__submission-group">
-                        <input class="form__submit-button" type="submit" value="Send"/>
-                        <input class="form__reset-button" type="reset" value="Reset"/>
+                        <div class="form__button-block button-block">
+                            <button type="submit" class="button-solid-mid-blue">
+                                <span class="button-solid-mid-blue__text-holder">
+                                    <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Submit</span>
+                                    <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Submit</span>
+                                </span>
+                            </button>
+                            <button type="reset" class="button-outline-dark">
+                                <span class="button-outline-dark__text-holder">
+                                    <span class="button-outline-dark__text button-outline-dark__text--standard">Reset</span>
+                                    <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Reset</span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -522,16 +534,26 @@
     <!-- FOOTER -->
 
     <footer class="footer">
-        <div class="footer-container container">
-            <div id="footer__small-print">
+        <div class="footer__container container">
+
+            <!-- LOGO -->
+
+            <a href="/" class="footer__logo-holder">
+                <img class="footer__logo" src="images/logos/logo-light.png" alt="Skald Advisory logo" />
+            </a>
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer__small-print">
                 <p class="footer__copyright">© Skald Advisory Ltd <script>document.write(String(new Date().getFullYear()));</script></p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
 
     <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/form.js"></script>
 
 </body>
 </html>
