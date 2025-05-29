@@ -12,33 +12,68 @@
     <!-- HEADER / NAV -->
 
     <header class="header">
+        <div class="header__container container">
+            <div class="header__inner">
 
-        <!-- LOGO -->
-        <a href="/" class="header__logo-holder">
-            <img class="header__logo" src="images/logos/logo-light.png" alt="Skald Advisory logo" />
-        </a>
+                <!-- LOGO -->
 
-        <!-- NAV -->
+                <a href="/" class="header__logo-holder">
+                    <img class="header__logo" src="images/logos/logo-light.png" alt="Skald Advisory logo" />
+                </a>
 
-        <nav class="header__nav main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__link">
-                    <a class="main-nav__link" href="#what">What we do</a>
-                </li>
-                <li class="main-nav__link">
-                    <a class="main-nav__link" href="#how">How we help</a>
-                </li>
-                <li class="main-nav__link">
-                    <a class="main-nav__link" href="#who">Who we work with</a>
-                </li>
-                <li class="main-nav__link">
-                    <a class="main-nav__link" href="#about">About</a>
-                </li>
-                <li class="main-nav__link">
-                    <a class="main-nav__link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
+                <!-- NAV -->
+
+                <div class="header__nav main-nav">
+                    <div class="main-nav__overlay"></div>
+                    <nav class="main-nav__menu">
+
+                        <!-- NAV LIST -->
+
+                        <ul class="main-nav__nav-list">
+                            <li class="main-nav__item">
+                                <a class="main-nav__link" href="#what">
+                                    <span class="main-nav__link-text">What we do</span>
+                                </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link" href="#how">
+                                    <span class="main-nav__link-text">How we help</span>
+                                </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link" href="#who">
+                                    <span class="main-nav__link-text">Who we work with</span>
+                                </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link" href="#about">
+                                    <span class="main-nav__link-text">About</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- BUTTON -->
+
+                        <div class="main-nav__button-block button-block">
+                            <a href="#contact" class="button-solid-dark">
+                                <div class="button-solid-dark__text-holder">
+                                    <span class="button-solid-dark__text button-solid-dark__text--standard">Contact</span>
+                                    <span aria-hidden="true" class="button-solid-dark__text button-solid-dark__text--hover">Contact</span>
+                                </div>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- BURGER -->
+
+                <button class="header__burger" aria-label="Toggle main nav" aria-expanded="false">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+
+            </div>
+        </div>
     </header>
 
     <!-- MAIN -->
@@ -55,8 +90,8 @@
 
                 <!-- BACKGROUND IMAGE -->
                 <picture class="home-hero__image-holder">
-                    <source srcset="images/home-hero.jpg" media="(min-width: 1024px)" />
-                    <img class="home-hero__image" src="images/home-hero-mobile.jpg" alt="a mountain peak in front of clear skies" />
+                    <source srcset="images/home-hero-4.png" media="(min-width: 768px)" />
+                    <img class="home-hero__image" src="images/home-hero-4-mob.png" alt="a mountain peak in front of clear skies" />
                 </picture>
 
                 <!-- TEXT -->
@@ -552,8 +587,9 @@
 
     <!-- SCRIPTS -->
 
-    <script src="assets/js/accordion.js"></script>
-    <script src="assets/js/form.js"></script>
+    <script src="assets/js/skald/accordion.js"></script>
+    <script src="assets/js/skald/form.js"></script>
+    <script src="assets/js/skald/main-nav.js"></script>
 
 </body>
 </html>

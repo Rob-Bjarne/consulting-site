@@ -35,7 +35,10 @@ $colour-inline-link: inherit; // setup
 $colour-background: $colour-light; // setup
 $colour-background-inverted: $colour-dark; // setup
 
-$faded: .75; // setup - explanation and example...
+$faded: .6; // setup - explanation and example...
+// explanation: to be used as an opacity value in order to keep a consistent value across components
+// example: reduced opacity text (.footer-small-print__copyright { opacity: $faded; }
+$inactive: .2; // setup - explanation and example...
 // explanation: to be used as an opacity value in order to keep a consistent value across components
 // example: a disabled carousel navigation button (.navigation__button--next { opacity: $faded; }
 
@@ -57,7 +60,7 @@ $font-inter-xbold: 'Inter-xbold';
 $font-inter-black: 'Inter-black';
 
 $font-body-text: $font-inter-light; // setup
-$font-main-heading: $font-inter-xlight; // setup
+$font-main-heading: $font-inter-light; // setup
 $font-heading: $font-inter-light; // setup
 
 //////////////////////////
