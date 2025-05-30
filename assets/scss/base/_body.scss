@@ -1,0 +1,11 @@
+@use "vars" as *;
+@use "util";
+
+body {
+    background-color: $colour-background;
+    scrollbar-gutter: stable;
+
+    &:has(.header--nav-open) {
+        overflow: hidden;
+    }
+}

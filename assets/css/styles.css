@@ -574,6 +574,14 @@ code {
   }
 }
 
+body {
+  background-color: #FFFFFF;
+  scrollbar-gutter: stable;
+}
+body:has(.header--nav-open) {
+  overflow: hidden;
+}
+
 .container {
   display: grid;
   grid-template-columns: 0 20px repeat(22, minmax(0, 1fr)) 20px 0;
