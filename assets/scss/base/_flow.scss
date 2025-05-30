@@ -1,0 +1,46 @@
+@use "vars" as *;
+@use "util";
+
+.flow {
+    & > .module + .module,
+    & > .pin-spacer + .module {
+        margin-block-start: var(--flow-space, $flow-space-sm);
+    }
+
+    & > .module--colour-inverted + .module--colour-inverted {
+        margin-block-start: 0;
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        & > .module + .module,
+        & > .pin-spacer + .module {
+            margin-block-start: var(--flow-space, $flow-space-lg);
+        }
+
+        & > .module--colour-inverted + .module--colour-inverted {
+            margin-block-start: 0;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        & > .module + .module,
+        & > .pin-spacer + .module {
+            margin-block-start: var(--flow-space, $flow-space-xl);
+        }
+
+        & > .module--colour-inverted + .module--colour-inverted {
+            margin-block-start: 0;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        & > .module + .module,
+        & > .pin-spacer + .module {
+            margin-block-start: var(--flow-space, $flow-space-2xl);
+        }
+
+        & > .module--colour-inverted + .module--colour-inverted {
+            margin-block-start: 0;
+        }
+    }
+}

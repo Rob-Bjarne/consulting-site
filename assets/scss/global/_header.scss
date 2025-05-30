@@ -1,0 +1,165 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.header {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline: 0;
+    height: $header-mobile-height;
+    z-index: 1;
+    transition: transform $transition-md-in-out;
+
+    &__container {
+        height: 100%;
+    }
+
+    &__inner {
+        grid-column: 3 / -2;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+    }
+
+    &__logo-holder {
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+    }
+
+    &__logo {
+        height: util.px2rem(40);
+        width: auto;
+        transition: filter $transition-sm-leave;
+        @include util.makeDark;
+        pointer-events: none;
+    }
+
+    &__nav {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline: 0;
+        height: 100dvh;
+        transform: translateX(100%);
+        transition: transform $transition-sm-leave;
+    }
+
+    &__burger {
+        position: relative;
+        z-index: 1;
+        grid-column: 2;
+        padding-block: util.px2rem(10);
+        padding-inline: util.px2rem(10) $container-padding-sm;
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: util.px2rem(8);
+        cursor: pointer;
+        background-color: $colour-transparent-1;
+        border: none;
+    }
+
+    &__burger-line {
+        background-color: $colour-black;
+        width: 30px;
+        height: 2px;
+        transition: transform $transition-sm-leave;
+    }
+
+    &--nav-open {
+        .header {
+            &__nav {
+                transform: translateX(0);
+                transition: transform $transition-sm-enter;
+            }
+
+            &__burger-line {
+                transition: transform $transition-sm-enter;
+
+                &:nth-child(1) {
+                    transform: rotate(-45deg) translate3d(-4px, 4px, 0);
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(45deg) translate3d(-3px, -3px, 0);
+                }
+            }
+
+            &__logo {
+                @include util.makeBlack;
+                transition: filter $transition-sm-enter;
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &__burger {
+            padding-inline: util.px2rem(10) $container-padding-lg;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &__burger {
+            padding-inline: util.px2rem(10) $container-padding-lg;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        height: $header-desktop-height;
+
+        &::before {
+            content: "";
+            @include util.square(100%);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-color: $colour-white;
+            transform: translateY(-100%);
+            transition: transform $transition-md-in-out;
+        }
+
+        &__inner {
+            grid-column: 3 / -3;
+            grid-template-rows: $header-desktop-grid-row-1 $header-desktop-grid-row-2;
+            padding-block: $header-desktop-padding-block-start $header-desktop-padding-block-end;
+            height: auto;
+            column-gap: util.px2rem(30);
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__logo-holder {
+            grid-row: 2;
+        }
+
+        &__logo {
+            height: util.px2rem(50);
+        }
+
+        &__nav {
+            position: relative;
+            grid-row: 2;
+            grid-column: 2;
+            inset-block-start: unset;
+            inset-inline: unset;
+            height: auto;
+            transform: translateX(0);
+        }
+    }
+}
+
+[data-scrolled="true"] {
+    .header {
+        transform: translateY(-100%);
+
+        @include util.screenWidthGreaterThan($screen-2xl) {
+            transform: translateY(calc((#{$header-desktop-grid-row-1} * -1) + $header-desktop-padding-block-end));
+
+            &::before {
+                transform: translateY(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.button-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: util.px2rem(30);
+    width: fit-content;
+
+    &--centre {
+        justify-content: center;
+        margin-inline: auto;
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        gap: util.px2rem(40);
+    }
+}

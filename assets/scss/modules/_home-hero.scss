@@ -1,0 +1,66 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.home-hero {
+    &__container {
+        isolation: isolate;
+        padding-block-start: calc(#{$header-mobile-height} / 2);
+    }
+
+    &__image-holder {
+        grid-column: 1/-1;
+        aspect-ratio: 1;
+    }
+
+    &__image {
+        object-fit: contain;
+        object-position: right;
+    }
+
+    &__tagline {
+        margin-block-start: util.px2rem(20);
+        @include util.getFont($font-inter-light);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &__container {
+            grid-template-rows: 1fr auto 1fr;
+            align-items: center;
+        }
+
+        &__tagline {
+            margin-block-start: util.px2rem(30);
+            font-size: util.px2rem(20);
+        }
+
+        &__text {
+            grid-column: 3/14;
+            grid-row: 2;
+        }
+
+        &__image-holder {
+            grid-column: 15/-1;
+            grid-row: 1/span 3;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &__container {
+            height: 100vh;
+            grid-template-rows: 1fr auto 1fr;
+        }
+
+        &__text {
+            grid-column: 3/12;
+        }
+
+        &__tagline {
+            margin-block-start: util.px2rem(40);
+            font-size: util.px2rem(24);
+        }
+
+        &__image-holder {
+            grid-column: 13/-1;
+        }
+    }
+}

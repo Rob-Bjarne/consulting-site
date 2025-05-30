@@ -1,0 +1,8 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.button-solid-dark {
+    @include util.buttonPill('button-solid-dark', $colour-dark, $colour-dark, $colour-light);
+
+    @include util.buttonPillHover('button-solid-dark', $colour-dark, $colour-light, $colour-dark);
+}

@@ -1,0 +1,9 @@
+{
+  "name": "skald_advisory_webiste",
+  "scripts": {
+    "sass": "sass assets/scss/styles.scss assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

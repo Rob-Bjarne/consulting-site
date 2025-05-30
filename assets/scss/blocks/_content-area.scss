@@ -1,0 +1,38 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: util.px2rem(30);
+
+    &__main-heading {
+        + .content-area {
+            &__logo-block {
+                margin-block-start: util.px2rem(30);
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        row-gap: util.px2rem(40);
+
+        &__main-heading {
+            + .content-area {
+                &__logo-block {
+                    margin-block-start: util.px2rem(45);
+                }
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        &__main-heading {
+            + .content-area {
+                &__logo-block {
+                    margin-block-start: util.px2rem(60);
+                }
+            }
+        }
+    }
+}
