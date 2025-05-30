@@ -140,21 +140,25 @@
 
 @mixin h1 { // setup
     @include getFont($font-main-heading);
-    font-size: px2rem(30);
+    font-size: px2rem(40);
     line-height: 1.1;
+    letter-spacing: px2rem(-0.68);
     color: $colour-heading-text;
     text-wrap: balance;
 
     @include screenWidthGreaterThan($screen-lg) {
-        font-size: px2rem(40);
+        font-size: px2rem(50);
+        letter-spacing: px2rem(-0.72);
     }
 
     @include screenWidthGreaterThan($screen-xl) {
-        font-size: px2rem(50);
+        font-size: px2rem(60);
+        letter-spacing: px2rem(-0.76);
     }
 
     @include screenWidthGreaterThan($screen-2xl) {
-        font-size: px2rem(60);
+        font-size: px2rem(70);
+        letter-spacing: px2rem(-0.8);
     }
 }
 
@@ -499,4 +503,8 @@
 
 @mixin makeBlack {
     filter: brightness(1) invert(1);
+}
+
+@mixin makeDark {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(1819%) hue-rotate(188deg) brightness(95%) contrast(87%);
 }

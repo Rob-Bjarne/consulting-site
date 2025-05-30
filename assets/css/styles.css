@@ -215,27 +215,31 @@ h1,
   font-family: "Inter", "sans-serif";
   font-style: normal;
   font-weight: 300;
-  font-size: 1.875rem;
+  font-size: 2.5rem;
   line-height: 1.1;
+  letter-spacing: -0.0425rem;
   color: #282B34;
   text-wrap: balance;
 }
 @media only screen and (min-width: 48rem) {
   h1,
   .h1 {
-    font-size: 2.5rem;
+    font-size: 3.125rem;
+    letter-spacing: -0.045rem;
   }
 }
 @media only screen and (min-width: 64rem) {
   h1,
   .h1 {
-    font-size: 3.125rem;
+    font-size: 3.75rem;
+    letter-spacing: -0.0475rem;
   }
 }
 @media only screen and (min-width: 75rem) {
   h1,
   .h1 {
-    font-size: 3.75rem;
+    font-size: 4.375rem;
+    letter-spacing: -0.05rem;
   }
 }
 
@@ -1233,6 +1237,9 @@ code {
   gap: 0.875rem;
 }
 
+.form {
+  isolation: isolate;
+}
 .form__fieldset {
   display: grid;
   gap: 20px;
@@ -1651,12 +1658,14 @@ code {
 .header__logo-holder {
   position: relative;
   z-index: 1;
+  width: fit-content;
 }
 .header__logo {
   height: 2.5rem;
   width: auto;
   transition: filter 0.2s ease-in;
-  filter: brightness(1) invert(1);
+  filter: brightness(0) saturate(100%) invert(12%) sepia(6%) saturate(1819%) hue-rotate(188deg) brightness(95%) contrast(87%);
+  pointer-events: none;
 }
 .header__nav {
   position: absolute;

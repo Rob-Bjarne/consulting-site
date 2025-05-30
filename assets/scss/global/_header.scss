@@ -24,13 +24,15 @@
     &__logo-holder {
         position: relative;
         z-index: 1;
+        width: fit-content;
     }
 
     &__logo {
         height: util.px2rem(40);
         width: auto;
         transition: filter $transition-sm-leave;
-        @include util.makeBlack;
+        @include util.makeDark;
+        pointer-events: none;
     }
 
     &__nav {

@@ -2,6 +2,8 @@
 @use '../base/vars' as *;
 
 .form {
+    isolation: isolate;
+
     &__fieldset {
         display: grid;
         gap: 20px;
