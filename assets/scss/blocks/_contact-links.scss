@@ -1,0 +1,8 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: util.px2rem(14);
+}

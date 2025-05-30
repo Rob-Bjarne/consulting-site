@@ -1,0 +1,30 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.footer {
+    background-color: $colour-background-inverted;
+    color: $colour-body-text-inverted;
+    padding-block: util.px2rem(60);
+
+    &__logo {
+        height: auto;
+        width: util.px2rem(130);
+    }
+
+    &__small-print {
+        margin-block-start: util.px2rem(40);
+        font-size: util.px2rem(12);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        padding-block: util.px2rem(80);
+
+        &__small-print {
+            margin-block-start: util.px2rem(60);
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        padding-block: util.px2rem(100);
+    }
+}

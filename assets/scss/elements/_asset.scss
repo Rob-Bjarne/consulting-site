@@ -1,0 +1,28 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.asset {
+    position: relative;
+    overflow: hidden;
+
+    &__image-holder,
+    &__video {
+        @include util.square(100%);
+    }
+
+    &__image,
+    &__video {
+        position: absolute;
+        @include util.coverImage;
+    }
+
+    &--with-parallax {
+        .asset {
+            &__image,
+            &__video {
+                inset-block-end: 0;
+                height: var(--parallax-image-height, 120%);
+            }
+        }
+    }
+}
