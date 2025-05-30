@@ -3,6 +3,7 @@
 
 .module {
     position: relative;
+    scroll-margin: 100px;
 
     &:last-child {
         margin-block-end: $flow-space-sm;
