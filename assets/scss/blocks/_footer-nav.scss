@@ -1,0 +1,36 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.footer-nav {
+    &__list {
+        padding: 0;
+        list-style: none;
+        width: fit-content;
+
+        &:has(.footer-nav__link:hover) {
+            .footer-nav__link:not(:hover) {
+                opacity: $inactive;
+                transition: opacity $transition-sm-leave;
+            }
+        }
+    }
+
+    &__link {
+        color: $colour-body-text-inverted;
+        text-decoration: none;
+        transition: opacity $transition-sm-leave;
+        padding-block: util.px2rem(5);
+        display: inline-block;
+    }
+
+    @include util.screenWidthGreaterThan($screen-xl) {
+        &__list {
+            display: flex;
+            transform: translateX(util.px2rem(-10));
+        }
+
+        &__link {
+            padding-inline: util.px2rem(10);
+        }
+    }
+}

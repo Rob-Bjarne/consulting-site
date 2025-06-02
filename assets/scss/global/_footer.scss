@@ -16,8 +16,16 @@
         font-size: util.px2rem(12);
     }
 
+    &__nav {
+        margin-block-start: util.px2rem(30);
+    }
+
+    &__copyright {
+        opacity: $faded;
+    }
+
     @include util.screenWidthGreaterThan($screen-lg) {
-        padding-block: util.px2rem(80);
+        padding-block: util.px2rem(80) util.px2rem(60);
 
         &__small-print {
             margin-block-start: util.px2rem(60);
@@ -25,6 +33,10 @@
     }
 
     @include util.screenWidthGreaterThan($screen-xl) {
-        padding-block: util.px2rem(100);
+        padding-block: util.px2rem(100) util.px2rem(60);
+
+        &__nav {
+            margin-block-start: util.px2rem(40);
+        }
     }
 }
