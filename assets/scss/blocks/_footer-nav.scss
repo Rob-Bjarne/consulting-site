@@ -26,6 +26,7 @@
     @include util.screenWidthGreaterThan($screen-xl) {
         &__list {
             display: flex;
+            transform: translateX(util.px2rem(-10));
         }
 
         &__link {

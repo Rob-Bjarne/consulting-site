@@ -1438,6 +1438,7 @@ body:has(.header--nav-open) {
 @media only screen and (min-width: 64rem) {
   .footer-nav__list {
     display: flex;
+    transform: translateX(-0.625rem);
   }
   .footer-nav__link {
     padding-inline: 0.625rem;
@@ -1674,7 +1675,10 @@ body:has(.header--nav-open) {
 }
 @media only screen and (min-width: 64rem) {
   .footer {
-    padding-block: 6.25rem;
+    padding-block: 6.25rem 3.75rem;
+  }
+  .footer__nav {
+    margin-block-start: 2.5rem;
   }
 }
 
