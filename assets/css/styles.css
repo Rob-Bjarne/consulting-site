@@ -1182,7 +1182,7 @@ body:has(.header--nav-open) {
 }
 .large-item-card__asset {
   aspect-ratio: 1;
-  width: 50%;
+  width: 25%;
   position: relative;
 }
 .large-item-card__image-holder {
@@ -1573,7 +1573,7 @@ body:has(.header--nav-open) {
 }
 @media only screen and (min-width: 48rem) {
   .grid-large-items__grid {
-    margin-block-start: 6.25rem;
+    margin-block-start: 5rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.875rem;

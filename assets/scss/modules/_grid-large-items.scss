@@ -26,7 +26,7 @@
 
     @include util.screenWidthGreaterThan($screen-lg) {
         &__grid {
-            margin-block-start: util.px2rem(100);
+            margin-block-start: util.px2rem(80);
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: util.px2rem(30);
