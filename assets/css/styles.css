@@ -1709,6 +1709,15 @@ body:has(.header--nav-open) {
   }
 }
 
+.basic-text:first-child {
+  margin-block-start: 150px;
+}
+@media only screen and (min-width: 75rem) {
+  .basic-text:first-child {
+    margin-block-start: 200px;
+  }
+}
+
 .footer {
   background-color: #282B34;
   color: #F3F3F3;
