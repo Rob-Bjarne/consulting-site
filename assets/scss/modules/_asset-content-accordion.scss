@@ -6,7 +6,9 @@
         margin-block-start: util.px2rem(60);
         grid-row: 2;
         grid-column: 1/-1;
-        aspect-ratio: 1;
+        aspect-ratio: 2;
+        background-color: $colour-light;
+        border-radius: $radius-md;
     }
 
     &__content-area {
