@@ -1,0 +1,45 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.button-arrow-down {
+    @include util.button;
+    gap: util.px2rem(10);
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        height: util.px2rem(2);
+        width: 100%;
+        background-color: $colour-dark;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: opacity $transition-sm-leave, transform 0s $transition-delay-sm;
+    }
+
+    &__text {
+        color: $colour-dark;
+        @include util.getFont($font-inter-semibold);
+        padding-block: util.px2rem(2);
+    }
+
+    &__icon {
+        transition: transform $transition-sm-leave;
+    }
+
+    @include util.hover {
+        &::after {
+            transform: translateX(0);
+            opacity: 1;
+            transition:  opacity 0s, transform $transition-sm-enter;
+        }
+
+        .button-arrow-down {
+            &__icon {
+                transform: translateY(util.px2rem(3));
+                transition: transform $transition-sm-enter;
+            }
+        }
+    }
+}
