@@ -84,4 +84,10 @@
     &__submission-group {
         margin-block-start: util.px2rem(40);
     }
+
+    &__privacy-text {
+        margin-block-start: util.px2rem(20);
+        font-size: util.px2rem(12);
+        opacity: $faded;
+    }
 }

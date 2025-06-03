@@ -1366,6 +1366,11 @@ body:has(.header--nav-open) {
 .form__submission-group {
   margin-block-start: 2.5rem;
 }
+.form__privacy-text {
+  margin-block-start: 1.25rem;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
 
 .main-nav {
   pointer-events: none;
