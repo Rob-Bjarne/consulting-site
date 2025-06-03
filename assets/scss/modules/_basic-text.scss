@@ -1,0 +1,14 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.basic-text {
+    &:first-child {
+        margin-block-start: 150px;
+    }
+
+    @include util.screenWidthGreaterThan($screen-2xl) {
+        &:first-child {
+            margin-block-start: 200px;
+        }
+    }
+}
