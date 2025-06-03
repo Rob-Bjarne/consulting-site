@@ -103,7 +103,7 @@
 
         &__nav-list {
             flex-direction: row;
-            gap: util.px2rem(30);
+            gap: 0;
 
             &:has(.main-nav__item:hover) {
                 .main-nav {
@@ -113,6 +113,10 @@
                     }
                 }
             }
+        }
+
+        &__link {
+            padding-inline: util.px2rem(15);
         }
 
         &__item {
