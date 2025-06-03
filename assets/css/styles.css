@@ -1721,25 +1721,33 @@ body:has(.header--nav-open) {
 .footer {
   background-color: #282B34;
   color: #F3F3F3;
-  padding-block: 3.75rem;
+  padding-block: 3.75rem 1.25rem;
 }
 .footer__logo {
   height: auto;
   width: 8.125rem;
 }
 .footer__small-print {
-  margin-block-start: 2.5rem;
+  margin-block-start: 3.75rem;
   font-size: 0.75rem;
+  padding-block-start: 1.25rem;
+  border-block-start: 1px solid rgba(243, 243, 243, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
 }
 .footer__nav {
   margin-block-start: 1.875rem;
 }
-.footer__copyright {
+.footer__copyright, .footer__privacy-link, .footer__address, .footer__company-number {
   opacity: 0.6;
+}
+.footer__privacy-link {
+  color: #F3F3F3;
 }
 @media only screen and (min-width: 48rem) {
   .footer {
-    padding-block: 5rem 3.75rem;
+    padding-block: 5rem 1.25rem;
   }
   .footer__small-print {
     margin-block-start: 3.75rem;
@@ -1747,7 +1755,7 @@ body:has(.header--nav-open) {
 }
 @media only screen and (min-width: 64rem) {
   .footer {
-    padding-block: 6.25rem 3.75rem;
+    padding-block: 6.25rem 1.25rem;
   }
   .footer__nav {
     margin-block-start: 2.5rem;

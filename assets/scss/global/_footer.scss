@@ -4,7 +4,7 @@
 .footer {
     background-color: $colour-background-inverted;
     color: $colour-body-text-inverted;
-    padding-block: util.px2rem(60);
+    padding-block: util.px2rem(60) util.px2rem(20);
 
     &__logo {
         height: auto;
@@ -12,20 +12,32 @@
     }
 
     &__small-print {
-        margin-block-start: util.px2rem(40);
+        margin-block-start: util.px2rem(60);
         font-size: util.px2rem(12);
+        padding-block-start: util.px2rem(20);
+        border-block-start: 1px solid rgb($colour-body-text-inverted, .2);
+        display: flex;
+        flex-direction: column;
+        gap: util.px2rem(10);
     }
 
     &__nav {
         margin-block-start: util.px2rem(30);
     }
 
-    &__copyright {
+    &__copyright,
+    &__privacy-link,
+    &__address,
+    &__company-number {
         opacity: $faded;
     }
 
+    &__privacy-link {
+        color: $colour-body-text-inverted;
+    }
+
     @include util.screenWidthGreaterThan($screen-lg) {
-        padding-block: util.px2rem(80) util.px2rem(60);
+        padding-block: util.px2rem(80) util.px2rem(20);
 
         &__small-print {
             margin-block-start: util.px2rem(60);
@@ -33,7 +45,7 @@
     }
 
     @include util.screenWidthGreaterThan($screen-xl) {
-        padding-block: util.px2rem(100) util.px2rem(60);
+        padding-block: util.px2rem(100) util.px2rem(20);
 
         &__nav {
             margin-block-start: util.px2rem(40);
