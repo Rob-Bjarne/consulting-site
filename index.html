@@ -1,274 +1,572 @@
 <!DOCTYPE HTML>
-<!--
-	Escape Velocity by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
-<html>
+<html lang="en">
 <head>
     <title>Skald Advisory</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
-<body class="homepage is-preload">
-<div id="page-wrapper">
+<body class="homepage" id="top">
 
-    <!-- Header -->
-    <section id="header" class="wrapper">
+<!-- HEADER / NAV -->
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="#main">Services</a></li>
-                <li><a href="#highlights">Who we work with</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </nav>
+<header class="header">
+    <div class="header__container container">
+        <div class="header__inner">
 
-    </section>
+            <!-- LOGO -->
 
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1">
-        <div class="title">Welcome</div>
-        <div class="container">
-            <p class="style2">
-                Helping B2B and SaaS companies<br class="mobile-hide"/>
-                grow faster — and smarter
-            </p>
-            <p class="style3">We partner with founders, revenue leaders, and investors to solve complex growth
-                challenges. Whether you're launching a new market, overhauling your GTM strategy, fixing team
-                performance, or at an inflection point, Skald Advisory brings calm, clarity, and commercial impact.</p>
-            <ul class="actions">
-                <li><a href="#" class="button style3 large">Get in touch</a></li>
-                <li><a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button style3 large">Schedule
-                    a call</a></li>
-            </ul>
+            <a href="#top" class="header__logo-holder">
+                <img class="header__logo" src="images/logos/logo-light.png" alt="Skald Advisory logo" />
+            </a>
+
+            <!-- NAV -->
+
+            <div class="header__nav main-nav">
+                <div class="main-nav__overlay"></div>
+                <nav class="main-nav__menu">
+
+                    <!-- NAV LIST -->
+
+                    <ul class="main-nav__nav-list">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#what">
+                                <span class="main-nav__link-text">What we do</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#how">
+                                <span class="main-nav__link-text">How we help</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#who">
+                                <span class="main-nav__link-text">Who we work with</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#about">
+                                <span class="main-nav__link-text">About</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- BUTTON -->
+
+                    <div class="main-nav__button-block button-block">
+                        <a href="#contact" class="button-solid-dark">
+                            <div class="button-solid-dark__text-holder">
+                                <span class="button-solid-dark__text button-solid-dark__text--standard">Contact</span>
+                                <span aria-hidden="true" class="button-solid-dark__text button-solid-dark__text--hover">Contact</span>
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- BURGER -->
+
+            <button class="header__burger" aria-label="Toggle main nav" aria-expanded="false">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+
+<main class="flow">
+
+    <!-- HERO -->
+
+    <section class="home-hero module">
+
+        <!-- CONTAINER -->
+
+        <div class="home-hero__container container">
+
+            <!-- IMAGE -->
+            <picture class="home-hero__image-holder">
+                <source srcset="images/hero/home-hero.png" media="(min-width: 768px)" />
+                <img class="home-hero__image" src="images/hero/home-hero-mob.png" alt="a mountain peak in front of clear skies" />
+            </picture>
+
+            <!-- TEXT -->
+
+            <div class="home-hero__text">
+                <h1 class="home-hero__heading">GTM Strategy for growth companies</h1>
+                <p class="home-hero__tagline">Helping B2B and SaaS companies<br role="presentation" class="home-hero__tagline-break"> grow faster — and smarter</p>
+
+                <!-- BUTTONS -->
+
+                <div class="home-hero__button-block button-block">
+                    <a href="#contact" class="button-solid-mid-blue">
+                        <div class="button-solid-mid-blue__text-holder">
+                            <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                            <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
+                        </div>
+                    </a>
+                    <a href="#what" class="button-arrow-down">
+                        <span class="button-arrow-down__text">Learn more</span>
+                        <svg class="button-arrow-down__icon" width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 6.91406L0.292969 2.20703L1.70703 0.792968L5 4.08594L8.29297 0.792969L9.70703 2.20703L5 6.91406Z" fill="#191948"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Main -->
-    <section id="main" class="wrapper style2">
-        <div class="title">How can we help?</div>
-        <div class="container">
-            <!-- Features -->
-            <section id="features">
-                <header class="style1">
+    <!-- WHAT WE DO -->
+
+    <section id="what" class="asset-content asset-content--reversed module">
+
+        <!-- CONTAINER -->
+
+        <div class="asset-content__container container">
+
+            <!-- CONTENT AREA -->
+
+            <div class="asset-content__content-area content-area">
+
+                <!-- HEADING -->
+
+                <h2 class="content-area__main-heading">Proactive partnership</h2>
+
+                <!-- TEXT -->
+
+                <div class="content-area__text-block text-block">
+                    <p>We partner with founders, revenue leaders, and investors to solve complex growth challenges. Whether you're launching a new market, overhauling your GTM strategy, fixing team performance, or at an inflection point, Skald Advisory brings calm, clarity, and commercial impact.</p>
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="content-area__button-block button-block">
+                    <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
+                        <div class="button-outline-dark__text-holder">
+                            <span class="button-outline-dark__text button-outline-dark__text--standard">Schedule a call</span>
+                            <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Schedule a call</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ASSET -->
+
+            <div class="asset-content__asset asset">
+                <picture class="asset-content__image-holder asset__image-holder">
+                    <source srcset="images/what-we-do/stakeholder-meeting.png" />
+                    <img class="asset-content__image asset__image" src="images/what-we-do/stakeholder-meeting.png" alt="stakeholder meeting" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE HELP -->
+
+    <section id="how" class="asset-content-accordion module">
+        <div class="asset-content-accordion__container container">
+
+            <!-- ASSET -->
+
+            <div class="asset-content-accordion__asset asset">
+                <picture class="asset-content-accordion__image-holder asset__image-holder">
+                    <source srcset="images/cards/card-1.png" />
+                    <img class="asset-content-accordion__image asset__image" src="images/cards/card-1.png" alt="composite image of person with icons" />
+                </picture>
+            </div>
+
+            <!-- CONTENT AREA -->
+
+            <div class="asset-content-accordion__content-area content-area">
+
+                <!-- HEADING -->
+
+                <h2 class="content-area__main-heading">How can we help?</h2>
+
+                <!-- TEXT -->
+
+                <div class="content-area__text-block text-block">
                     <p>Every engagement is different — here are a few ways we often work with clients.</p>
-                </header>
-                <div class="feature-list">
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon fa-comment">Go-to-Market Strategy</h3>
-                                <p>We design scalable, data-driven GTM models aligned to your ICP, channels, and growth
-                                    stage. From inbound/outbound sales to PLG and partnerships, we help you unlock
-                                    sustainable revenue.</p>
-                            </section>
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="content-area__button-block button-block">
+                    <a href="#contact" class="button-solid-mid-blue">
+                        <div class="button-solid-mid-blue__text-holder">
+                            <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                            <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
                         </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-sync">Sales & Revenue Advisory</h3>
-                                <p>We improve sales performance, structure teams, and implement operating cadences to
-                                    drive pipeline, predictability, and accountability.</p>
-                            </section>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ACCORDION -->
+
+            <dl class="asset-content-accordion__accordion accordion">
+
+                <!-- ITEM -->
+
+                <div class="accordion__item accordion__item--active">
+                    <dt class="accordion__term">
+                        <span>Go-to-Market & Revenue Advisory</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path class="accordion-icon__line accordion-icon__line--horizontal-" d="M0 8H16"/>
+                            <path class="accordion-icon__line accordion-icon__line--vertical" d="M8 0L8 16"/>
+                        </svg>
+                    </dt>
+                    <dd class="accordion__detail">
+                        <div class="accordion__content-holder">
+                            <div class="accordion__content">
+                                <div class="accordion__text text-block">
+                                    <p>Helping companies unlock growth by designing scalable GTM strategies, improving sales performance, and aligning pricing and packaging to customer value.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon fa-image">Pricing & Product Packaging</h3>
-                                <p>We refine pricing, messaging, and packaging to increase ACV, reduce sales friction,
-                                    and better align with customer value.</p>
-                            </section>
+                    </dd>
+                </div>
+
+                <!-- ITEM -->
+
+                <div class="accordion__item">
+                    <dt class="accordion__term">
+                        <span>Interim GTM Leadership</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path class="accordion-icon__line accordion-icon__line--horizontal-" d="M0 8H16"/>
+                            <path class="accordion-icon__line accordion-icon__line--vertical" d="M8 0L8 16"/>
+                        </svg>
+                    </dt>
+                    <dd class="accordion__detail">
+                        <div class="accordion__content-holder">
+                            <div class="accordion__content">
+                                <div class="accordion__text text-block">
+                                    <p>Stepping in during inflection points to provide senior-level leadership across CRO, VP Sales, or GTM roles — offering immediate traction and long-term structure.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-cog">Interim GTM Leadership</h3>
-                                <p>We provide short-term executive cover and special ops support for CRO or GTM roles,
-                                    helping you drive transformation, hiring, and clarity during inflection points.</p>
-                            </section>
+                    </dd>
+                </div>
+
+                <!-- ITEM -->
+
+                <div class="accordion__item">
+                    <dt class="accordion__term">
+                        <span>Mentoring & Executive Coaching</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path class="accordion-icon__line accordion-icon__line--horizontal-" d="M0 8H16"/>
+                            <path class="accordion-icon__line accordion-icon__line--vertical" d="M8 0L8 16"/>
+                        </svg>
+                    </dt>
+                    <dd class="accordion__detail">
+                        <div class="accordion__content-holder">
+                            <div class="accordion__content">
+                                <div class="accordion__text text-block">
+                                    <p>Supporting founders, rising execs, and functional leaders with tailored coaching that accelerates development and boosts confidence.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-wrench">International Expansion Strategy</h3>
-                                <p>We support entry into UK, US, or APAC markets — with tailored go-to-market, team
-                                    design, messaging, and localisation guidance.</p>
-                            </section>
+                    </dd>
+                </div>
+
+                <!-- ITEM -->
+
+                <div class="accordion__item">
+                    <dt class="accordion__term">
+                        <span>Strategic Projects</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path class="accordion-icon__line accordion-icon__line--horizontal-" d="M0 8H16"/>
+                            <path class="accordion-icon__line accordion-icon__line--vertical" d="M8 0L8 16"/>
+                        </svg>
+                    </dt>
+                    <dd class="accordion__detail">
+                        <div class="accordion__content-holder">
+                            <div class="accordion__content">
+                                <div class="accordion__text text-block">
+                                    <p>Leading high-impact, time-bound initiatives — from launching new markets to revamping sales playbooks — bringing structure, clarity, and speed.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6 col-12-medium">
-                            <section>
-                                <h3 class="icon solid fa-check">Mentoring & Executive Coaching</h3>
-                                <p>We offer founder, executive, and emerging leader coaching. This is especially
-                                    valuable in fast-growing startups where leadership responsibilities often outpace
-                                    support. Think of it as exec-level mentorship with a pragmatic lens.</p>
-                            </section>
+                    </dd>
+                </div>
+            </dl>
+
+        </div>
+    </section>
+
+    <!-- WHO WE WORK WITH -->
+
+    <section id="who" class="grid-large-items module">
+
+        <!-- CONTAINER -->
+
+        <div class="grid-large-items__container container">
+
+            <!-- HEADING -->
+
+            <h2 class="grid-large-items__heading">Who we work with</h2>
+
+            <!-- GRID -->
+
+            <div class="grid-large-items__grid">
+
+                <div class="large-item-card">
+                    <div class="large-item-card__asset">
+                        <picture class="large-item-card__image-holder">
+                            <source srcset="images/who/profile-shots.png" />
+                            <img class="large-item-card__image" src="images/who/profile-shots.png" alt="composite image of person with icons" />
+                        </picture>
+                    </div>
+                    <h3 class="large-item-card__heading">Executive Teams</h3>
+                    <p class="large-item-card__text">Founders, CEOs and executive teams at B2B/SaaS companies navigating their next stage of growth.</p>
+                </div>
+
+                <div class="large-item-card">
+                    <div class="large-item-card__asset">
+                        <picture class="large-item-card__image-holder">
+                            <source srcset="images/who/org-chart.png" />
+                            <img class="large-item-card__image" src="images/who/org-chart.png" alt="composite image of person with icons" />
+                        </picture>
+                    </div>
+                    <h3 class="large-item-card__heading">Chief People Officers</h3>
+                    <p class="large-item-card__text">From organizational design to building high performance teams and cultures.</p>
+                </div>
+
+                <div class="large-item-card">
+                    <div class="large-item-card__asset">
+                        <picture class="large-item-card__image-holder">
+                            <source srcset="images/who/ipad.png" />
+                            <img class="large-item-card__image" src="images/who/ipad.png" alt="composite image of person with icons" />
+                        </picture>
+                    </div>
+                    <h3 class="large-item-card__heading">Investors</h3>
+                    <p class="large-item-card__text">Trusted advisory support for portfolio companies or expert input during due diligence.</p>
+                </div>
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="grid-large-items__button-block button-block button-block--centre">
+                <a href="#contact" class="button-solid-mid-blue">
+                    <div class="button-solid-mid-blue__text-holder">
+                        <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Get in touch</span>
+                        <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Get in touch</span>
+                    </div>
+                </a>
+                <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
+                    <div class="button-outline-dark__text-holder">
+                        <span class="button-outline-dark__text button-outline-dark__text--standard">Schedule a call</span>
+                        <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Schedule a call</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="asset-content module">
+
+        <!-- CONTAINER -->
+
+        <div class="asset-content__container container">
+
+            <!-- CONTENT AREA -->
+
+            <div class="asset-content__content-area content-area">
+
+                <!-- HEADING -->
+
+                <h2 class="content-area__main-heading">About our founder</h2>
+
+                <!-- TEXT -->
+
+                <div class="content-area__text-block text-block">
+                    <p>Rob Long is the founder of Skald Advisory. As Workable’s first sales hire and eventual CRO, he helped grow the company from 10 people to over 300, reaching $50M+ ARR across global markets.</p>
+                    <p> Rob has also led Sales, Product Strategy, Product Marketing, Partnerships, and HR. His strength lies in solving messy growth problems with structured thinking and hands-on action. He brings breadth, calm, and credibility to every room — whether advising founders, mentoring functional leaders, or steering GTM strategy.</p>
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="content-area__button-block button-block">
+                    <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank" class="button-outline-dark">
+                        <div class="button-outline-dark__text-holder">
+                            <span class="button-outline-dark__text button-outline-dark__text--standard">Schedule a call</span>
+                            <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Schedule a call</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ASSET -->
+
+            <div class="asset-content__asset asset">
+                <picture class="asset-content__image-holder asset__image-holder">
+                    <source srcset="images/about/talk.jpg" />
+                    <img class="asset-content__image asset__image" src="images/about/talk.jpg" alt="composite image of person with icons" />
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact-module module">
+
+        <!-- CONTAINER -->
+
+        <div class="contact-module__container container">
+
+            <!-- CONTENT AREA -->
+
+            <div class="contact-module__content-area content-area">
+
+                <!-- HEADING -->
+
+                <h2 class="content-area__main-heading">Get in touch</h2>
+
+                <!-- TEXT -->
+
+                <div class="content-area__text-block text-block">
+                    <p class="mini-callout__text">If you’re building something ambitious and need an experienced partner to accelerate growth, we’d love to hear from you.</p>
+                </div>
+
+                <!-- CONTACT LINKS -->
+
+                <div class="content-area__contact-links contact-links">
+
+                    <!-- SCHEDULE CALL -->
+
+                    <div class="contact-links__contact-link contact-link">
+                        <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
+                        </svg>
+                        <div class="contact-link__links-holder">
+                            <a class="contact-link__link" href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank">
+                                <span class="contact-link__text">Schedule a call</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL -->
+
+                    <div class="contact-links__contact-link contact-link">
+                        <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9l.3-.5z"/>
+                        </svg>
+                        <div class="contact-link__links-holder">
+                            <a class="contact-link__link" href="https://www.linkedin.com/in/robertlong1/" target="_blank">
+                                <span class="contact-link__text">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-links__contact-link contact-link">
+                        <svg class="contact-link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/>
+                        </svg>
+                        <div class="contact-link__links-holder">
+                            <a class="contact-link__link" href="mailto:hello@skald.co" target="_blank">
+                                <span class="contact-link__text">hello@skald.co</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <ul class="actions special">
-                    <li><a href="#footer" class="button style1 large">Get in touch</a></li>
-                    <li><a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank"
-                           class="button style2 large">Schedule a call</a></li>
-                </ul>
-            </section>
-
-        </div>
-    </section>
-
-    <!-- Highlights -->
-    <section id="highlights" class="wrapper style3">
-        <div class="title">Who we work with</div>
-        <div class="container">
-            <div class="row aln-center">
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic02.jpg" alt=""/></a>
-                        <h3><a href="#">Executive Teams</a></h3>
-                        <p>Founders, CEOs and executive teams at B2B/SaaS companies navigating their next stage of
-                            growth.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic03.jpg" alt=""/></a>
-                        <h3><a href="#">Chief People Officers</a></h3>
-                        <p>From organiztional design to building high performance teams and cultures.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-4 col-12-medium">
-                    <section class="highlight">
-                        <a href="#" class="image featured"><img src="images/pic04.jpg" alt=""/></a>
-                        <h3><a href="#">Investors</a></h3>
-                        <p>Trusted advisory support for portfolio companies or expert input during due diligence.</p>
-                        <ul class="actions">
-                        </ul>
-                    </section>
-                </div>
             </div>
-        </div>
-    </section>
-    <!-- About -->
-    <section id="about" class="wrapper style1">
-        <div class="title">About Me</div>
-        <div class="container">
-            <p class="style3">Rob Long is the founder of Skald Advisory. As Workable's first sales hire and eventual
-                CRO, he helped grow the company from 10 people to over 300, reaching $50M+ ARR across global markets.
-                Rob has also led Sales, Product Strategy, Product Marketing, Partnerships, and HR.
-                His strength lies in solving messy growth problems with structured thinking and hands-on action. He
-                brings breadth, calm, and credibility to every room — whether advising founders, mentoring functional
-                leaders, or steering GTM strategy.
-            </p>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <section id="footer" class="wrapper">
-        <div class="title">Get in touch</div>
-        <div class="container">
-            <header class="style1">
-                <h2>Need some help?</h2>
-                <p>
-                    If you’re building something ambitious and need an experienced<br/>
-                    partner to accelerate growth, we’d love to hear from you.
-                </p>
-            </header>
-            <div class="row">
-                <div class="col-6 col-12-medium">
+            <!-- FORM -->
 
-                    <!-- Contact Form -->
-                    <section>
-                        <form name="contact" method="POST" data-netlify="true">
-                            <input type="hidden" name="form-name" value="contact"/>
-                            <div class="row gtr-50">
-                                <div class="col-6 col-12-small">
-                                    <input type="text" name="name" id="contact-name" placeholder="Name" required/>
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <input type="email" name="email" id="contact-email" placeholder="Email" required/>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" id="contact-message" placeholder="Message" rows="4"
-                                              required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <ul class="actions">
-                                        <li><input type="submit" class="style1" value="Send"/></li>
-                                        <li><input type="reset" class="style2" value="Reset"/></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-
+            <form class="contact-module__form form" id="form" name="contact" method="POST" data-netlify="true">
+                <input class="visually-hidden" type="hidden" name="form-name" value="contact"/>
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <label class="form__label" for="contact-name">Name</label>
+                        <input class="form__input" type="text" name="name" id="contact-name" required/>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="contact-email">Email</label>
+                        <input class="form__input" type="email" name="email" id="contact-email" required/>
+                    </div>
+                    <div class="form__field">
+                        <label class="form__label" for="contact-message">Message</label>
+                        <textarea class="form__input form__input--textarea" name="message" id="contact-message" rows="4" required></textarea>
+                    </div>
+                </fieldset>
+                <div class="form__submission-group">
+                    <div class="form__button-block button-block">
+                        <button type="submit" class="button-solid-mid-blue">
+                                <span class="button-solid-mid-blue__text-holder">
+                                    <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Submit</span>
+                                    <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Submit</span>
+                                </span>
+                        </button>
+                        <button type="reset" class="button-outline-dark">
+                                <span class="button-outline-dark__text-holder">
+                                    <span class="button-outline-dark__text button-outline-dark__text--standard">Reset</span>
+                                    <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Reset</span>
+                                </span>
+                        </button>
+                    </div>
                 </div>
-                <div class="col-6 col-12-medium">
-
-                    <!-- Contact -->
-                    <section class="feature-list small">
-                        <div class="row">
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3 class="icon solid fa-home">Schedule a call</h3>
-                                    <p>
-                                        <a href="https://calendar.app.google/owZBrX1FjrqS9GDt5" target="_blank">Book a
-                                            meeting</a><br/>
-                                    </p>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3 class="icon solid fa-comment">Social</h3>
-                                    <p>
-                                        <a href="https://www.linkedin.com/in/robertlong1/"
-                                           target="_blank">LinkedIn</a><br/>
-                                    </p>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3 class="icon solid fa-envelope">Email</h3>
-                                    <p>
-                                        <a href="mailto:hello@skald.co">hello@skald.co</a>
-                                    </p>
-                                </section>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <section>
-                                    <h3 class="icon solid fa-phone">Phone</h3>
-                                    <p>
-                                        07771 234 456
-                                    </p>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-
-            </div>
-            <div id="copyright">
-                <ul>
-                    <li>&copy;Skald Advisory Ltd 2025</li>
-                </ul>
-            </div>
+            </form>
         </div>
     </section>
 
-</div>
+</main>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- FOOTER -->
+
+<footer class="footer">
+    <div class="footer__container container">
+
+        <!-- LOGO -->
+
+        <a href="#top" class="footer__logo-holder">
+            <img class="footer__logo" src="images/logos/logo-light.png" alt="Skald Advisory logo" />
+        </a>
+
+        <!-- NAV -->
+
+        <nav class="footer__nav footer-nav">
+            <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                    <a href="#what" class="footer-nav__link">What we do</a>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="#how" class="footer-nav__link">How we help</a>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="#who" class="footer-nav__link">Who we work with</a>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="#about" class="footer-nav__link">About</a>
+                </li>
+                <li class="footer-nav__item">
+                    <a href="#contact" class="footer-nav__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer__small-print">
+            <p class="footer__copyright">© Skald Advisory Ltd<script>document.write(String(new Date().getFullYear()));</script></p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+
+<script src="assets/js/skald/accordion.js"></script>
+<script src="assets/js/skald/form.js"></script>
+<script src="assets/js/skald/main-nav.js"></script>
+<script src="assets/js/skald/body-scroll-states.js"></script>
 
 </body>
 </html>
