@@ -2,12 +2,27 @@
 @use '../base/vars' as *;
 
 .large-item-card {
-    overflow: hidden;
+    position: relative;
     text-decoration: none;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 0;
+        @include util.square(0);
+        border-radius: $radius-circle;
+    }
+
+    &__heading,
+    &__text {
+        position: relative;
+        z-index: 2;
+    }
 
     &__heading {
         font-size: util.px2rem(30);
@@ -24,9 +39,30 @@
         aspect-ratio: 1;
         width: 25%;
         position: relative;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            @include util.square(0);
+            border-radius: $radius-circle;
+        }
+
+        &::before {
+            inset-block-start: 75%;
+            inset-inline-start: 25%;
+        }
+
+        &::after {
+            inset-block-start: 50%;
+            inset-inline-end: 0;
+        }
     }
 
     &__image-holder {
+        position: relative;
+        z-index: 2;
         @include util.square(100%);
     }
 
@@ -34,5 +70,68 @@
         position: absolute;
         @include util.coverImage;
         border-radius: $radius-sm;
+    }
+
+    &:nth-child(3n + 1) {
+        &::before {
+            box-shadow: 0 0 50px 30px $colour-yellow;
+            opacity: .5;
+        }
+
+        .large-item-card {
+            &__asset {
+                &::before {
+                    box-shadow: 0 0 50px 40px $colour-coral;
+                    opacity: .2;
+                }
+
+                &::after {
+                    box-shadow: 0 0 50px 20px $colour-light-blue;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+
+    &:nth-child(3n + 2) {
+        &::before {
+            box-shadow: 0 0 50px 20px $colour-coral;
+            opacity: .4;
+        }
+
+        .large-item-card {
+            &__asset {
+                &::before {
+                    box-shadow: 0 0 50px 30px $colour-light-blue;
+                    opacity: .3;
+                }
+
+                &::after {
+                    box-shadow: 0 0 50px 40px $colour-yellow;
+                    opacity: .4;
+                }
+            }
+        }
+    }
+
+    &:nth-child(3n) {
+        &::before {
+            box-shadow: 0 0 50px 20px $colour-light-blue;
+            opacity: .5;
+        }
+
+        .large-item-card {
+            &__asset {
+                &::before {
+                    box-shadow: 0 0 50px 40px $colour-yellow;
+                    opacity: .4;
+                }
+
+                &::after {
+                    box-shadow: 0 0 50px 20px $colour-coral;
+                    opacity: .5;
+                }
+            }
+        }
     }
 }
