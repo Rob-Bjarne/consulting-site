@@ -2,9 +2,19 @@
 @use '../base/vars' as *;
 
 .contact-module {
-    &__form {
+    &__form-holder {
         margin-block-start: util.px2rem(60);
         max-width: calc(#{$column-width-5xl} * 10);
+    }
+
+    &__content-area {
+        margin-block-start: util.px2rem(30);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &__content-area {
+            margin-block-start: util.px2rem(40);
+        }
     }
 
     @include util.screenWidthGreaterThan($screen-xl) {
@@ -12,15 +22,53 @@
             grid-column: 3/14;
         }
 
-        &__form {
+        &__form-holder {
+            position: relative;
             grid-column: 15/-3;
-            margin-block-start: 0;
+            margin-block-start: util.px2rem(40);
+            padding: 40px $column-width-xl;
+
+            &::before,
+            &::after {
+                content: '';
+                @include util.square(calc(100% - 10px));
+                border-radius: $radius-md;
+                position: absolute;
+            }
+
+            &::before {
+                inset-block-start: 0;
+                inset-inline-start: 0;
+                background-color: $colour-light;
+                z-index: 1;
+            }
+
+            &::after {
+                inset-inline-end: 0;
+                inset-block-end: 0;
+                background-color: $colour-light-blue;
+            }
+        }
+
+        &__form {
+            position: relative;
+            z-index: 2;
         }
     }
 
     @include util.screenWidthGreaterThan($screen-2xl) {
         &__content-area {
             grid-column: 3/13;
+        }
+
+        &__form-holder {
+            padding: 50px $column-width-2xl;
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-5xl) {
+        &__form-holder {
+            padding: 60px $column-width-5xl;
         }
     }
 }

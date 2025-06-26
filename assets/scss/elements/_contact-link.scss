@@ -4,6 +4,7 @@
 .contact-link {
     position: relative;
     padding-inline-start: 40px;
+    width: fit-content;
 
     &__icon {
         @include util.square(20px);

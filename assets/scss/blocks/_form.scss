@@ -55,6 +55,7 @@
         border: none;
         border-block-end: 1px solid rgb($colour-dark, .2);
         outline: none;
+        background-color: $colour-transparent-1;
 
         &--textarea {
             padding-block-start: util.px2rem(10);
@@ -67,17 +68,30 @@
         height: util.px2rem(20);
         z-index: 1;
         display: inline-flex;
-        background-color: white;
         margin-block-start: util.px2rem(15);
         width: fit-content;
         transition: transform $transition-sm-leave;
         transform-origin: left;
+
+        &:has(+ .form__input[required]) {
+            &::after {
+                content: '*';
+                font-size: util.px2rem(14);
+                opacity: $faded;
+                transition: opacity $transition-sm-leave;
+            }
+        }
 
         &:has(+ .form__input:focus),
         &:has(+ .form__input.form__input--has-content) {
             transform: translateY(calc(#{util.px2rem(25)} * -1)) scale(0.8);
             transition: transform $transition-sm-enter;
             pointer-events: none;
+
+            &::after {
+                opacity: 0;
+                transition: opacity $transition-sm-enter;
+            }
         }
     }
 

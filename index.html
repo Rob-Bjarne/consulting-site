@@ -400,13 +400,13 @@
 
         <div class="contact-module__container container">
 
+            <!-- HEADING -->
+
+            <h2 class="content-area__main-heading">Get in touch</h2>
+
             <!-- CONTENT AREA -->
 
             <div class="contact-module__content-area content-area">
-
-                <!-- HEADING -->
-
-                <h2 class="content-area__main-heading">Get in touch</h2>
 
                 <!-- TEXT -->
 
@@ -461,40 +461,42 @@
 
             <!-- FORM -->
 
-            <form class="contact-module__form form" id="form" name="contact" method="POST" data-netlify="true">
-                <input class="visually-hidden" type="hidden" name="form-name" value="contact"/>
-                <fieldset class="form__fieldset">
-                    <div class="form__field">
-                        <label class="form__label" for="contact-name">Name</label>
-                        <input class="form__input" type="text" name="name" id="contact-name" required/>
-                    </div>
-                    <div class="form__field">
-                        <label class="form__label" for="contact-email">Email</label>
-                        <input class="form__input" type="email" name="email" id="contact-email" required/>
-                    </div>
-                    <div class="form__field">
-                        <label class="form__label" for="contact-message">Message</label>
-                        <textarea class="form__input form__input--textarea" name="message" id="contact-message" rows="4" required></textarea>
-                    </div>
-                </fieldset>
-                <div class="form__submission-group">
-                    <div class="form__button-block button-block">
-                        <button type="submit" class="button-solid-mid-blue">
+            <div class="contact-module__form-holder">
+                <form class="contact-module__form form" id="form" name="contact" method="POST" data-netlify="true">
+                    <input class="visually-hidden" type="hidden" name="form-name" value="contact"/>
+                    <fieldset class="form__fieldset">
+                        <div class="form__field">
+                            <label class="form__label" for="contact-name">Name</label>
+                            <input class="form__input" type="text" name="name" id="contact-name" required/>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="contact-email">Email</label>
+                            <input class="form__input" type="email" name="email" id="contact-email" required/>
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="contact-message">Message</label>
+                            <textarea class="form__input form__input--textarea" name="message" id="contact-message" rows="4" required></textarea>
+                        </div>
+                    </fieldset>
+                    <div class="form__submission-group">
+                        <div class="form__button-block button-block">
+                            <button type="submit" class="button-solid-mid-blue">
                                 <span class="button-solid-mid-blue__text-holder">
                                     <span class="button-solid-mid-blue__text button-solid-mid-blue__text--standard">Submit</span>
                                     <span aria-hidden="true" class="button-solid-mid-blue__text button-solid-mid-blue__text--hover">Submit</span>
                                 </span>
-                        </button>
-                        <button type="reset" class="button-outline-dark">
+                            </button>
+                            <button type="reset" class="button-outline-dark">
                                 <span class="button-outline-dark__text-holder">
                                     <span class="button-outline-dark__text button-outline-dark__text--standard">Reset</span>
                                     <span aria-hidden="true" class="button-outline-dark__text button-outline-dark__text--hover">Reset</span>
                                 </span>
-                        </button>
+                            </button>
+                        </div>
+                        <p class="form__privacy-text">By submitting this form you agree to our <a href="https://skald.co/privacy">privacy policy</a>.</p>
                     </div>
-                    <p class="form__privacy-text">By submitting this form you agree to our <a href="https://skald.co/privacy">privacy policy</a>.</p>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
