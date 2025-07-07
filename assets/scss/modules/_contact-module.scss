@@ -5,6 +5,7 @@
     &__form-holder {
         margin-block-start: util.px2rem(60);
         max-width: calc(#{$column-width-5xl} * 10);
+        isolation: isolate;
     }
 
     &__content-area {

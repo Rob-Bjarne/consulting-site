@@ -1771,6 +1771,7 @@ body:has(.header--nav-open) {
 .contact-module__form-holder {
   margin-block-start: 3.75rem;
   max-width: calc(calc((100rem - calc(100rem / 24) * 2) / 22) * 10);
+  isolation: isolate;
 }
 .contact-module__content-area {
   margin-block-start: 1.875rem;
