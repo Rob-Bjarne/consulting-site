@@ -1,0 +1,29 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.table-module {
+    &__heading {
+        justify-self: center;
+        text-align: center;
+    }
+
+    &__table {
+        margin-block-start: util.px2rem(60);
+        grid-column: 1/-1;
+    }
+
+    &__small-text {
+        font-style: italic;
+        font-size: util.px2rem(12);
+        text-align: center;
+        justify-self: center;
+        margin-block-start: util.px2rem(30);
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        &__table {
+            margin-block-start: util.px2rem(80);
+            grid-column: 3/-3;
+        }
+    }
+}

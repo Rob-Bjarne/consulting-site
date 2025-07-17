@@ -1,0 +1,69 @@
+@use '../base/util';
+@use '../base/vars' as *;
+
+.feature-table {
+    border-collapse: collapse;
+    background-color: $colour-light;
+
+    &__thead {
+        background-color: $colour-light-blue;
+    }
+
+    &__th {
+        padding: util.px2rem(10);
+        @include util.getFont($font-inter-semibold);
+        font-size: util.px2rem(20);
+
+        &--body {
+            text-align: start;
+            padding-inline-start: $container-padding-sm;
+        }
+    }
+
+    &__td {
+        padding: util.px2rem(10);
+        font-size: util.px2rem(18);
+        text-align: center;
+    }
+
+    &__tr {
+        &--body {
+            border-inline: 1px solid $colour-light;
+
+            &:nth-of-type(odd) {
+                background-color: $colour-white;
+
+                .feature-table {
+                    &__td {
+                        border-inline-start: 1px solid $colour-light;
+                    }
+                }
+            }
+
+            &:nth-of-type(even) {
+                .feature-table {
+                    &__td {
+                        border-inline-start: 1px solid $colour-white;
+                    }
+                }
+            }
+        }
+    }
+
+    @include util.screenWidthGreaterThan($screen-lg) {
+        clip-path: inset(0 0 0 0 round $radius-md);
+
+        &__th,
+        &__td{
+            padding: util.px2rem(20);
+        }
+
+        &__th {
+            white-space: nowrap;
+
+            &--tbody {
+                text-align: center;
+            }
+        }
+    }
+}
