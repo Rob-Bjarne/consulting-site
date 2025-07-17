@@ -1623,7 +1623,7 @@ body:has(.header--nav-open) {
   .feature-table__th {
     white-space: nowrap;
   }
-  .feature-table__th--tbody {
+  .feature-table__th--body {
     text-align: center;
   }
 }
